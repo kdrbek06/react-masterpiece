@@ -14,7 +14,7 @@ export default function Reviews() {
               <div>
                 <p className="text-gray-600">"It really saves me time and effort. FWR Bootstrap Blocks is exactly what our business has been lacking. FWR Bootstrap Blocks was worth a fortune to my company. FWR Bootstrap Blocks has really helped our business. I'm good to go."</p>
                 <div className="text-gray-900 font-bold uppercase mt-6">- Jesse D.</div>
-                <div className="text-gray-600">Apple</div>
+                <div className="text-blue-600">Apple</div>
               </div>
             </div>
           </div>
