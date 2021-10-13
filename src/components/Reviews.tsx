@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React from 'react'
 
-export interface IAppProps {
-}
-
-export default function App (props: IAppProps) {
+export default function Reviews() {
   return (
-    <div></div>
-  );
+    <div>
+      <p>This is the review page</p>
+    </div>
+  )
 }
+
