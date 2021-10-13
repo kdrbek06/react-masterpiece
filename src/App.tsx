@@ -13,6 +13,7 @@ import Payments from './components/Payments';
 function App() {
   return (
     <div className="App">
+      <Navbar/>
       <Router>
         <Link to="/"><button>Home</button></Link>
         <Link to="/Login"><button>Login</button></Link>
