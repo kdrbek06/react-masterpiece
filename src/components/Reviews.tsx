@@ -1,9 +1,30 @@
-import React from 'react'
+import React from 'react';
+import ReviewCard from './ReviewCard';
 
 export default function Reviews() {
+  // function searchButton() {
+  //   console.log('clicked')
+  // }
+
   return (
+    <>
+    <form>
+      <div className="mb-6 mx-5">
+        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="searchReview">
+          Search Review
+        </label>
+        <input className="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="text" placeholder="Search for a Cook"></input>
+        <button className="text-lg font-semibold 
+        bg-gray-800 w-full text-white rounded-lg
+        px-6 py-3 block shadow-xl hover:text-white hover:bg-black">
+        Search
+      </button>
+      </div>
+    </form>
+    <ReviewCard />
+
     <div className="testimonial-1 py-4 md:py-12">
-      <div className="container mx-auto px-4">
+      <div className="container  px-4">
         <div className="md:flex md:flex-wrap md:-mx-4 mb-4">
 
           <div className="md:w-1/2 md:px-4 mt-6 md:mt-0">
@@ -12,9 +33,9 @@ export default function Reviews() {
                 <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
               </div>
               <div>
-                <p className="text-gray-600">"It really saves me time and effort. FWR Bootstrap Blocks is exactly what our business has been lacking. FWR Bootstrap Blocks was worth a fortune to my company. FWR Bootstrap Blocks has really helped our business. I'm good to go."</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Jesse D.</div>
-                <div className="text-blue-600">Apple</div>
+                <p className="text-gray-600">"Great food, would order again"</p>
+                <div className="text-gray-900 font-bold uppercase mt-6">- Piet U.</div>
+                <div className="text-blue-600">02/01/21</div>
               </div>
             </div>
           </div>
@@ -25,9 +46,9 @@ export default function Reviews() {
                 <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
               </div>
               <div>
-                <p className="text-gray-600">"Needless to say we are extremely satisfied with the results. Keep up the excellent work. Your company is truly upstanding and is behind its product 100%. Thanks guys, keep up the good work! Thanks guys, keep up the good work!"</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Annabell M.</div>
-                <div className="text-gray-600">Microsoft</div>
+                <p className="text-gray-600">"This food suxx"</p>
+                <div className="text-gray-900 font-bold uppercase mt-6">- Rudy J.</div>
+                <div className="text-blue-600">12/01/21</div>
               </div>
             </div>
           </div>
@@ -38,9 +59,9 @@ export default function Reviews() {
                 <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
               </div>
               <div>
-                <p className="text-gray-600">"FWR Bootstrap Blocks is exactly what our business has been lacking. FWR Bootstrap Blocks is both attractive and highly adaptable. Man, this thing is getting better and better as I learn more about it."</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Candace H.</div>
-                <div className="text-gray-600">Google</div>
+                <p className="text-gray-600">"Average but for a good price"</p>
+                <div className="text-gray-900 font-bold uppercase mt-6">- Louis L.</div>
+                <div className="text-blue-600">01/02/21</div>
               </div>
             </div>
           </div>
@@ -51,15 +72,16 @@ export default function Reviews() {
                 <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
               </div>
               <div>
-                <p className="text-gray-600">"This is simply unbelievable! I use FWR Bootstrap Blocks often. You've saved our business! No matter where you go, FWR Bootstrap Blocks is the coolest, most happening thing around!"</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Joe H.</div>
-                <div className="text-gray-600">Facebook</div>
+                <p className="text-gray-600">"I don't feel well after this"</p>
+                <div className="text-gray-900 font-bold uppercase mt-6">- Nick G.</div>
+                <div className="text-blue-600">20/02/21</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   )
 }
 
