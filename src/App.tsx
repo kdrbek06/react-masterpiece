@@ -7,6 +7,7 @@ import MainPage from './components/MainPage';
 import Login from './components/Login';
 import Reviews from './components/Reviews';
 import Payments from './components/Payments';
+import MainCarousel from './components/MainCarousel';
 
 
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+      <MainCarousel/>
       <Router>
         <Link to="/"><button>Home</button></Link>
         <Link to="/Login"><button>Login</button></Link>
