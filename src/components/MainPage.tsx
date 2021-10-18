@@ -5,7 +5,7 @@ export default function MainPage() {
     return (
         <div>
             <MainCarousel />
-            <p>this is the Main Page Mayne</p>
+            <p></p>
         </div>
     )
 }

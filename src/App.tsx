@@ -6,7 +6,7 @@ import MainPage from './components/MainPage';
 import Login from './components/Login';
 import Reviews from './components/Reviews';
 import Payments from './components/Payments';
-
+import Footer from './components/Footer'
 
 
 
@@ -24,6 +24,9 @@ function App() {
           <Route path="/Payments" component={Payments}></Route>
         </Switch>
       </Router>
+
+
+      <Footer/>
     </div>
   );
 }
