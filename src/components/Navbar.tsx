@@ -14,9 +14,9 @@ export default function App (props: IAppProps) {
 
       <div className="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
         <ul className="text-  m sm:flex">
-          <li><a href="" className="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Menus</a></li>
+          <li><Link to="/Menus" className="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Menus</Link></li>
           <li><Link to="/Reviews" className="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Reviews</Link></li>
-          <li><Link to="/Payments" className="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Collabration</Link></li>
+          <li><Link to="/Payments" className="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Collaboration</Link></li>
           <li><a href="/" className="block mt-4 sm:inline-block sm:mt-0 text-teal-200 hover:text-white mr-4">Contact</a></li>
         </ul>
       </div>

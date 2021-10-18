@@ -6,7 +6,8 @@ import MainPage from './components/MainPage';
 import Login from './components/Login';
 import Reviews from './components/Reviews';
 import Payments from './components/Payments';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import Menus from './components/Menus';
 
 
 
@@ -19,7 +20,7 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={MainPage}></Route>
-          <Route path="/Login" component={Login}></Route>
+          <Route path="/Menus" component={Menus}></Route>
           <Route path="/Reviews" component={Reviews}></Route>
           <Route path="/Payments" component={Payments}></Route>
         </Switch>
