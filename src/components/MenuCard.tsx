@@ -97,6 +97,7 @@ export default function MenuCard() {
         </div>
       </div>
     </div>
+    <p>Add your menu here : </p>
     <label className="block text-left max-width 100%">
       <span className="text-gray-700">Pick a day</span>
       <select className="form-select block w-full mt-1">
@@ -108,6 +109,26 @@ export default function MenuCard() {
           <option>Saturday</option>
       </select>
     </label>
+    <form className="w-full max-w-sm">
+      <div className="flex items-center border-b border-teal-500 py-2">
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder=" Add Starter" aria-label="Starter"></input>
+        <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+          + Add
+        </button>
+      </div>
+      <div className="flex items-center border-b border-teal-500 py-2">
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder=" Add Main" aria-label="Main"></input>
+        <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+          + Add
+        </button>
+      </div>
+      <div className="flex items-center border-b border-teal-500 py-2">
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder=" Add Dessert" aria-label="Dessert"></input>
+        <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
+          + Add
+        </button>
+      </div>
+    </form>
     </>
   )
 }
