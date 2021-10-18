@@ -7,7 +7,7 @@ export interface IAppProps {
 
 export default function App (props: IAppProps) {
   return (
-    <nav className="flex item-center justify-between flex-wrap bg-gray-600 p-6">
+    <nav className="flex item-center justify-between flex-wrap bg-gray-400 p-6">
       <div className="flex item-center flex-shrink-0 text-white mr-6">
         <Link to="/"> <span  className="font-bold text-xl">Brand Name</span> </Link>
       </div>
