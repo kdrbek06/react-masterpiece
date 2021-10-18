@@ -3,6 +3,7 @@ import React from 'react';
 
 export default function MenuCard() {
   return (
+    <>
     <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
       <div className="s p-4 border-4 ">
         <div className="box-border md:box-content h-350 w-800 p-4 border-4 text-center decoration-clone bg-gradient-to-b from-green-100 to-blue-150 text-transparent text-purple-500 text-opacity-50 text-6xl">
@@ -96,6 +97,18 @@ export default function MenuCard() {
         </div>
       </div>
     </div>
+    <label className="block text-left max-width 100%">
+      <span className="text-gray-700">Pick a day</span>
+      <select className="form-select block w-full mt-1">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+      </select>
+    </label>
+    </>
   )
 }
 

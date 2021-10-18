@@ -20,6 +20,15 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
   
+  plugins: [],
+  purge: ['./src/**/*.html'], // change it
+  darkMode: 'media',
+  theme: {
+    extend: {
+    },
+  },
+  variants: {
+    extend: {},
+  },
 }

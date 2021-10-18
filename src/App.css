@@ -10,15 +10,25 @@
     margin-right: 1rem;
 }
 
-/*Styling Menu Card*/
-
 .name 
 {
     float: left;
     position: absolute;
 }
 
-.price 
+.dropdown nav 
 {
-
+    display: none;
 }
+
+.dropdown nav 
+{
+    display: none;
+}
+.dropdown:focus-within nav 
+{
+    display: block
+}
+
+
+ 
