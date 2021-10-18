@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 export default function MenuCard() {
+  const [menu, setMenu] = useState({starter: "", main: "", dessert: ""});
+
+  const handleChange = (event: any) => {
+    setMenu({ ...menu, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    console.log("menu created", menu);
+  };
+
   return (
     <>
     <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
@@ -98,36 +109,33 @@ export default function MenuCard() {
       </div>
     </div>
     <p>Add your menu here : </p>
-    <label className="block text-left max-width 100%">
-      <span className="text-gray-700">Pick a day</span>
-      <select className="form-select block w-full mt-1">
-          <option>Monday</option>
-          <option>Tuesday</option>
-          <option>Wednesday</option>
-          <option>Thursday</option>
-          <option>Friday</option>
-          <option>Saturday</option>
-      </select>
-    </label>
-    <form className="w-full max-w-sm">
+    <form className="w-full max-w-sm" onSubmit={handleSubmit}>
+      <label className="block text-left max-width 100%">
+        <span className="text-gray-700">Pick a day</span>
+        <select className="form-select block w-full mt-1">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+        </select>
+      </label>
       <div className="flex items-center border-b border-teal-500 py-2">
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder=" Add Starter" aria-label="Starter"></input>
-        <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-          + Add
-        </button>
+        <label htmlFor="starter">starter</label>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="starter" aria-label="starter" onChange={handleChange}></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder=" Add Main" aria-label="Main"></input>
-        <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-          + Add
-        </button>
+        <label htmlFor="starter">main</label>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="main" aria-label="main" onChange={handleChange}></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder=" Add Dessert" aria-label="Dessert"></input>
-        <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button">
-          + Add
-        </button>
+        <label htmlFor="starter">dessert</label>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name=" dessert" aria-label="dessert" onChange={handleChange}></input>
       </div>
+      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button" >
+        + Add
+      </button>
     </form>
     </>
   )
