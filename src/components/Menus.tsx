@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React from 'react';
+import MenuCard from './MenuCard';
 
-export interface IAppProps {
-}
-
-export default function App (props: IAppProps) {
+export default function Menus() {
   return (
-    <div></div>
-  );
+    <div>
+      <MenuCard />
+    </div>
+  )
 }
+
