@@ -20,7 +20,7 @@ export default function App(props: IAppProps) {
       </div>
 
       <div className="flex justify-center">
-        {[0,1,2].map((item, index)=> <span className={`my-6 mx-2 ${image === index && 'bg-green-300'}`}>O</span> )}
+        {[0,1,2].map((item, index)=> <span key={item + ''} className={`my-6 mx-2 ${image === index && 'bg-green-300'}`}>O</span> )}
         
         {/* <span className={`my-6 mx-2 ${image === 1 && 'bg-green-300'}`}>O</span>
         <span className={`my-6 mx-2 ${image === 2 && 'bg-green-300'}`}>O</span> */}

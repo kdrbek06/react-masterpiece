@@ -40,7 +40,7 @@ export default function MainPage() {
         <div>
             <MainCarousel />
             <div className="background_skew-down"></div>
-            <div className="flex text-center items-center justify-around flex-wrap bg-yellow-300 px-6 py-12">{COOKS.map((skill) => <Cooks {...skill} />)}
+            <div className="flex text-center items-center justify-around flex-wrap bg-yellow-300 px-6 py-12">{COOKS.map((skill, index) => <Cooks  key={skill.name + index} {...skill} />)}
 
             </div>
             <div className="background_skew-down"></div>

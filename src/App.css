@@ -1,6 +1,6 @@
-/* .mainCarousel {
+.mainCarousel {
     @apply w-full min-h-2/3 flex flex-col px-12 bg-cover bg-center flex-auto;
-} */
+}
 
 .carouselArrow {
     @apply w-8 h-8 border-solid border border-black rounded-full text-center leading-relaxed bg-white cursor-pointer hover:bg-opacity-50 select-none;
@@ -10,8 +10,6 @@
     margin-right: 1rem;
 }
 
-<<<<<<< HEAD
-=======
 .background_skew-down {
     transform: skewY(1deg);
     transform-origin: 0;
@@ -19,9 +17,9 @@
     background-color: white;
 
 }
+
 /*Styling Menu Card*/
 
->>>>>>> 7f48590f1d4788437630201c94997c3032bae5e9
 .name 
 {
     float: left;
