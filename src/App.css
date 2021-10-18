@@ -9,3 +9,16 @@
 .react-icons {
     margin-right: 1rem;
 }
+
+/*Styling Menu Card*/
+
+.name 
+{
+    float: left;
+    position: absolute;
+}
+
+.price 
+{
+
+}
