@@ -4,6 +4,7 @@ import { SiLinkedin } from "react-icons/si";
 import { SiGoogle } from "react-icons/si";
 import { SiFacebook } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
+import Logo2 from '../image/logo2.png'
 
 
 
@@ -16,19 +17,20 @@ export default function App(props: IAppProps) {
   return (
     <div>
 
-      <footer className="flex bg-gray-600 p-10">
+      <footer className="flex flex-col bg-gray-400 p-10 md:flex-row">
+
 
         <div className="footerLogo flex flex-1 flex-col px-2">
-          <img className="py-4" src="" alt="LOGO" />
+          <img className="py-4" src={Logo2} width="125px" alt="LOGO" /> 
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam suscipit pariatur voluptatem quia harum asperiores sit perspiciatis, voluptas natus quo.</p>
         </div>
 
 
 
         <div className="footerLinks flex flex-1 flex-col px-2">
-          <h4 className="py-4">Usefull Links</h4>
+          <h4 className="py-4">USEFULL LINKS</h4>
           <ul>
-            <li><a href="" className="hover:text-white">HOMEPAGE</a></li>
+            <li><a href="" className="hover:text-white">Homepage</a></li>
           </ul>
         </div>
 
@@ -53,10 +55,11 @@ export default function App(props: IAppProps) {
           <h4 className="py-4 text-center">EMAIL NEWSLETTER</h4>
           <p>Lorem ipsum dolor sit amet.</p>
           <input className="my-2 rounded-lg" type="email" />
-          <input className="my-2 rounded-lg" type="submit" value="SUBSCRIBE"/>
-          </div>
-        
+          <input className="my-2 rounded-lg" type="submit" value="SUBSCRIBE" />
+        </div>
+
       </footer>
+
 
     </div>
   );

@@ -9,3 +9,11 @@
 .react-icons {
     margin-right: 1rem;
 }
+
+.background_skew-down {
+    transform: skewY(1deg);
+    transform-origin: 0;
+    height: 60px;
+    background-color: white;
+
+}
