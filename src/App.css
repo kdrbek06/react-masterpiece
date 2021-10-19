@@ -1,5 +1,5 @@
 .mainCarousel {
-    @apply w-full min-h-2/3 flex flex-col px-12 bg-cover bg-center flex-auto;
+    @apply w-full min-h-2/3 flex flex-col p-12 -mb-12 bg-cover bg-center flex-auto relative z-0 overflow-hidden;
 }
 
 .carouselArrow {
@@ -10,12 +10,8 @@
     margin-right: 1rem;
 }
 
-.background_skew-down {
-    transform: skewY(1deg);
-    transform-origin: 0;
-    height: 60px;
-    background-color: white;
-
+.backgroundMatrix {
+    transform: matrix(1, -0.05, 0, 1, 0, 0);
 }
 
 /*Styling Menu Card*/
