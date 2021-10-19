@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],  darkMode: false, // or 'media' or 'class'
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html', './src/**/*.html'],  darkMode: 'media', // or 'media' or 'class'
   theme: {
     minHeight: {
       '0': '0',
@@ -22,13 +22,4 @@ module.exports = {
   },
   
   plugins: [],
-  purge: ['./src/**/*.html'], // change it
-  darkMode: 'media',
-  theme: {
-    extend: {
-    },
-  },
-  variants: {
-    extend: {},
-  },
 }
