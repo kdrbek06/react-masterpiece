@@ -12,7 +12,7 @@ export default function MenuCard() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const menu = { day, starter, main, dessert}
-    // console.log(menu);
+    console.log(menu);
     fetch('')
   }
 
@@ -22,9 +22,10 @@ export default function MenuCard() {
       return res.json();
     })
     .then((data) => {
-      console.log(data)
-    })
-  }, [])
+      console.log(data);
+      setMenu(data);
+    });
+  }, []);
 
   return (
     <>
@@ -40,7 +41,7 @@ export default function MenuCard() {
                   <p className="price">price</p>
                 </div>
                 <div className="underline  bg-white">
-                  <p className="name">Main</p>
+                  <p className="name">main</p>
                   <p className="price">price</p>
                 </div>
                 <div className="underline bg-white">
