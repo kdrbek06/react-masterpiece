@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 
 export default function MenuCard() {
+  const [day, setDay] = useState("Monday");
   const [starter, setStarter] = useState("");
   const [main, setMain] = useState("");
   const [dessert, setDessert] = useState("");
@@ -109,7 +110,8 @@ export default function MenuCard() {
     <form className="w-full max-w-sm">
       <label className="block text-left max-width 100%">
         <span className="text-gray-700">Pick a day</span>
-        <select className="form-select block w-full mt-1">
+        <select className="form-select block w-full mt-1"
+        value={day} onChange={(e) => setDay(e.target.value)}>
             <option>Monday</option>
             <option>Tuesday</option>
             <option>Wednesday</option>
@@ -139,6 +141,7 @@ export default function MenuCard() {
       <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button" onClick={handleMenuClick}>
         + Add
       </button>
+      <p> {day} </p>
       <p> {starter}</p>
       <p> {main}</p>
       <p> {dessert}</p>
