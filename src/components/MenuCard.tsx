@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 
 
 export default function MenuCard() {
-  const [menu, setMenu] = useState({starter: "", main: "", dessert: ""});
+  const [starter, setStarter] = useState("");
 
-  const handleChange = (event: any) => {
-    setMenu({ ...menu, [event.target.name]: event.target.value });
-  };
-
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    console.log("menu created", menu);
-  };
+  function handleMenuClick() {
+    console.log("clickedy")
+  }
 
   return (
     <>
@@ -109,7 +104,7 @@ export default function MenuCard() {
       </div>
     </div>
     <p>Add your menu here : </p>
-    <form className="w-full max-w-sm" onSubmit={handleSubmit}>
+    <form className="w-full max-w-sm">
       <label className="block text-left max-width 100%">
         <span className="text-gray-700">Pick a day</span>
         <select className="form-select block w-full mt-1">
@@ -123,19 +118,22 @@ export default function MenuCard() {
       </label>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">starter</label>
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="starter" aria-label="starter" onChange={handleChange}></input>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+        type="text" value={starter}
+        onChange={(e) => setStarter(e.target.value)}></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">main</label>
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="main" aria-label="main" onChange={handleChange}></input>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="main" aria-label="main"></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">dessert</label>
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name=" dessert" aria-label="dessert" onChange={handleChange}></input>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name=" dessert" aria-label="dessert"></input>
       </div>
-      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button" >
+      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button" onClick={handleMenuClick}>
         + Add
       </button>
+      <p> {starter}</p>
     </form>
     </>
   )

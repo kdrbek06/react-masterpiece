@@ -10,8 +10,6 @@
     margin-right: 1rem;
 }
 
-<<<<<<< HEAD
-=======
 .background_skew-down {
     transform: skewY(1deg);
     transform-origin: 0;
@@ -21,7 +19,6 @@
 }
 /*Styling Menu Card*/
 
->>>>>>> 7f48590f1d4788437630201c94997c3032bae5e9
 .name 
 {
     float: left;
