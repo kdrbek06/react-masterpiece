@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 export default function MenuCard() {
-  const [menu, setMenu] = useState([
+  const [menu, setMenu] = useState(null);
 
-  ])
   const [day, setDay] = useState("Monday");
   const [starter, setStarter] = useState("");
   const [main, setMain] = useState("");
@@ -16,6 +15,16 @@ export default function MenuCard() {
     // console.log(menu);
     fetch('')
   }
+
+  useEffect(() => {
+    fetch('http://localhost:8000/menu')
+    .then(res => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data)
+    })
+  }, [])
 
   return (
     <>
