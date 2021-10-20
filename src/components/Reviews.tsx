@@ -21,66 +21,97 @@ export default function Reviews() {
       </button>
       </div>
     </form>
-    <ReviewCard />
 
-    <div className="testimonial-1 py-4 md:py-12">
-      <div className="container  px-4">
-        <div className="md:flex md:flex-wrap md:-mx-4 mb-4">
 
-          <div className="md:w-1/2 md:px-4 mt-6 md:mt-0">
-            <div className="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
-                <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
-              </div>
-              <div>
-                <p className="text-gray-600">"Great food, would order again"</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Piet U.</div>
-                <div className="text-blue-600">02/01/21</div>
-              </div>
+
+
+
+
+    <div className="mx-5 bg-white shadow-lg rounded-lg  px-4 py-4 max-w-sm ">
+      <div className="mb-1 tracking-wide px-4 py-4" >
+          <h2 className="text-gray-800 font-semibold mt-1">67 Users reviews</h2>
+          <div className="border-b -mx-8 px-8 pb-3">
+            <div className="flex items-center mt-1">
+                <div className=" w-1/5 text-indigo-500 tracking-tighter">
+                  <span>5 star</span>
+                </div>
+                <div className="w-3/5">
+                  <div className="bg-gray-300 w-full rounded-lg h-2">
+                      <div className=" w-7/12 bg-indigo-600 rounded-lg h-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/5 text-gray-700 pl-3">
+                  <span className="text-sm">51%</span>
+                </div>
+            </div>
+            <div className="flex items-center mt-1">
+                <div className="w-1/5 text-indigo-500 tracking-tighter">
+                  <span>4 star</span>
+                </div>
+                <div className="w-3/5">
+                  <div className="bg-gray-300 w-full rounded-lg h-2">
+                      <div className="w-1/5 bg-indigo-600 rounded-lg h-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/5 text-gray-700 pl-3">
+                  <span className="text-sm">17%</span>
+                </div>
+            </div>
+            <div className="flex items-center mt-1">
+                <div className="w-1/5 text-indigo-500 tracking-tighter">
+                  <span>3 star</span>
+                </div>
+                <div className="w-3/5">
+                  <div className="bg-gray-300 w-full rounded-lg h-2">
+                      <div className=" w-3/12 bg-indigo-600 rounded-lg h-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/5 text-gray-700 pl-3">
+                  <span className="text-sm">19%</span>
+                </div>
+            </div>
+            <div className="flex items-center mt-1">
+                <div className=" w-1/5 text-indigo-500 tracking-tighter">
+                  <span>2 star</span>
+                </div>
+                <div className="w-3/5">
+                  <div className="bg-gray-300 w-full rounded-lg h-2">
+                      <div className=" w-1/5 bg-indigo-600 rounded-lg h-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/5 text-gray-700 pl-3">
+                  <span className="text-sm">8%</span>
+                </div>
+            </div>
+            <div className="flex items-center mt-1">
+                <div className="w-1/5 text-indigo-500 tracking-tighter">
+                  <span>1 star</span>
+                </div>
+                <div className="w-3/5">
+                  <div className="bg-gray-300 w-full rounded-lg h-2">
+                      <div className=" w-2/12 bg-indigo-600 rounded-lg h-2"></div>
+                  </div>
+                </div>
+                <div className="w-1/5 text-gray-700 pl-3">
+                  <span className="text-sm">5%</span>
+                </div>
             </div>
           </div>
-
-          <div className="md:w-1/2 md:px-4 mt-6 md:mt-0">
-            <div className="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
-                <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
-              </div>
-              <div>
-                <p className="text-gray-600">"This food suxx"</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Rudy J.</div>
-                <div className="text-blue-600">12/01/21</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:w-1/2 md:px-4 mt-6">
-            <div className="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
-                <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
-              </div>
-              <div>
-                <p className="text-gray-600">"Average but for a good price"</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Louis L.</div>
-                <div className="text-blue-600">01/02/21</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:w-1/2 md:px-4 mt-6">
-            <div className="testimonial p-6 border-2 border-solid flex hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
-                <img src="//via.placeholder.com/100/eee" alt="profile image" className="w-full h-full object-cover"></img>
-              </div>
-              <div>
-                <p className="text-gray-600">"I don't feel well after this"</p>
-                <div className="text-gray-900 font-bold uppercase mt-6">- Nick G.</div>
-                <div className="text-blue-600">20/02/21</div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div className="w-full px-4">
+          <h3 className="font-medium tracking-tight">Review this item</h3>
+          <p className="text-gray-700 text-sm py-1">
+            give your opinion about this item.
+          </p>
+          <button className="bg-gray-100 border border-gray-400 px-3 py-1 rounded  text-gray-800 mt-2">write a review</button>
       </div>
     </div>
+
+
+
+    <ReviewCard />
+
+
     </>
   )
 }
