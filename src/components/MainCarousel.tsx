@@ -12,15 +12,15 @@ export default function App(props: IAppProps) {
   const handleRightArrow = () => setImage(image === 2 ? 0 : image + 1)
 
   return (
-    <div className={`mainCarousel bg-hero-${image}`}>
-
+    <div className="mainCarousel">
+      <div className={`bg-hero-${image} absolute inset-0 -mt-12 -z-1 backgroundMatrix`}></div>
       <div className="flex-auto justify-between items-center flex">
         <span className="carouselArrow" onClick={handleLeftArrow}> &lt;</span>
         <span className="carouselArrow" onClick={handleRightArrow}> &gt;</span>
       </div>
 
       <div className="flex justify-center">
-        {[0,1,2].map((item, index)=> <span className={`my-6 mx-2 ${image === index && 'bg-green-300'}`}>O</span> )}
+        {[0,1,2].map((item, index)=> <span key={item + ''} className={`my-6 mx-2 ${image === index && 'bg-green-300'}`}>O</span> )}
         
         {/* <span className={`my-6 mx-2 ${image === 1 && 'bg-green-300'}`}>O</span>
         <span className={`my-6 mx-2 ${image === 2 && 'bg-green-300'}`}>O</span> */}

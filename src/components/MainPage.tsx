@@ -6,6 +6,7 @@ import Cook1 from '../image/cook1.jpg';
 import Cook2 from '../image/cook2.jpg';
 import Cook3 from '../image/cook3.jpg';
 import Cook4 from '../image/cook4.jpg';
+import ReviewCard from './ReviewCard';
 
 
 
@@ -39,13 +40,24 @@ export default function MainPage() {
     return (
         <div>
             <MainCarousel />
-            <div className="background_skew-down"></div>
-            <div className="flex text-center items-center justify-around flex-wrap bg-yellow-300 px-6 py-12">{COOKS.map((skill) => <Cooks {...skill} />)}
-
+            <div className="flex text-center items-center justify-around flex-wrap px-6 py-24 relative">
+                <div className="absolute bg-white inset-0 py-12 backgroundMatrix">
+                    <div className="bg-yellow-300 w-full h-full "></div>
+                </div>
+                {COOKS.map((skill, index) => <Cooks key={skill.name + index} {...skill} />)}
             </div>
-            <div className="background_skew-down"></div>
 
-            
+
+
+
+            <div className="text-center">
+                <h2 className="my-8 text-3xl font-bold" >OUR CLIENTS LOVE US</h2>
+                <ReviewCard />
+            </div>
+
+
+
+
 
 
 

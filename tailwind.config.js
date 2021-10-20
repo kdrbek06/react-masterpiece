@@ -14,7 +14,14 @@ module.exports = {
         'hero-0': "url('./image/11.jpg')",
         'hero-1': "url('./image/22.jpg')",
         'hero-2': "url('./image/33.jpg')",
-       },
+      },
+      margin: {
+        '-6': '-1.5rem',
+        '-12': '-3rem',
+      },
+      zIndex: {
+        '-1': '-1',
+       }
     },
   },
   variants: {
