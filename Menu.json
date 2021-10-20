@@ -1,16 +1,45 @@
 {
     "menu": [
-        {   
+        {   "id": 1,
             "day": "Monday",
             "starter": "Potage du jour",
             "main": "Pomme d'amour",
             "dessert": "Salade du fruits"
         },
         {
+            "id": 2,
             "day": "Tuesday",
             "starter": "Croquette crevette",
             "main": "Moules Frites",
             "dessert": "Mousse au chocolat"
+        },
+        {
+            "id": 3,
+            "day": "Wednesday",
+            "starter": "Croquette fromage",
+            "main": "Pain Saucisse",
+            "dessert": "Mousse au fraise"
+        },
+        {
+            "id": 4,
+            "day": "Thursday",
+            "starter": "Croquette duo",
+            "main": "Pain Fromage",
+            "dessert": "Mousse au Camembert"
+        },
+        {
+            "id": 5,
+            "day": "Friday",
+            "starter": "Cocktail of crevettes",
+            "main": "Panette poison",
+            "dessert": "Mousse au Brie"
+        },
+        {
+            "id": 6,
+            "day": "Saturday",
+            "starter": "Carpaccio",
+            "main": "Pain Jambon",
+            "dessert": "Tiramisu"
         }
     ]
 }

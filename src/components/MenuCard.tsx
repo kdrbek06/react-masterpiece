@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 
 export default function MenuCard() {
+  const [menu, setMenu] = useState([
+
+  ])
   const [day, setDay] = useState("Monday");
   const [starter, setStarter] = useState("");
   const [main, setMain] = useState("");
@@ -10,7 +13,8 @@ export default function MenuCard() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const menu = { day, starter, main, dessert}
-    console.log(menu);
+    // console.log(menu);
+    fetch('')
   }
 
   return (
@@ -23,7 +27,7 @@ export default function MenuCard() {
           <div className="grid grid-cols-3 grid-template-columns: repeat(6, minmax(0, 1fr))">
             <div className="border-solid border-2 bg-green-300 text-center">Monday
                 <div className="underline bg-white">
-                  <p className="name">Starter</p>
+                  <p className="name">starter</p>
                   <p className="price">price</p>
                 </div>
                 <div className="underline  bg-white">
