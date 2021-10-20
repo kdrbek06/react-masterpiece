@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 
 export default function MenuCard() {
   const [starter, setStarter] = useState("");
+  const [main, setMain] = useState("");
+  const [dessert, setDessert] = useState("");
 
   function handleMenuClick() {
     console.log("clickedy")
@@ -124,16 +126,22 @@ export default function MenuCard() {
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">main</label>
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="main" aria-label="main"></input>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+        type="text" value={main}
+        onChange={(e) => setMain(e.target.value)}></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">dessert</label>
-        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name=" dessert" aria-label="dessert"></input>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+        type="text" value={dessert}
+        onChange={(e) => setDessert(e.target.value)}></input>
       </div>
       <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button" onClick={handleMenuClick}>
         + Add
       </button>
       <p> {starter}</p>
+      <p> {main}</p>
+      <p> {dessert}</p>
     </form>
     </>
   )
