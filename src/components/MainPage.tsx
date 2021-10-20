@@ -7,6 +7,8 @@ import Cook2 from '../image/cook2.jpg';
 import Cook3 from '../image/cook3.jpg';
 import Cook4 from '../image/cook4.jpg';
 import ReviewCard from './ReviewCard';
+import Collaboration from './Collaboration';
+import Contacts from './Contacts';
 
 
 
@@ -50,10 +52,13 @@ export default function MainPage() {
 
 
 
-            <div className="text-center">
+            <div className="text-center bg-gray-400 py-16">
                 <h2 className="my-8 text-3xl font-bold" >OUR CLIENTS LOVE US</h2>
                 <ReviewCard />
             </div>
+
+            <Collaboration />
+            <Contacts/>
 
 
 
