@@ -7,8 +7,10 @@ export default function MenuCard() {
   const [main, setMain] = useState("");
   const [dessert, setDessert] = useState("");
 
-  function handleMenuClick() {
-    console.log("clickedy")
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const menu = { day, starter, main, dessert}
+    console.log(menu);
   }
 
   return (
@@ -107,7 +109,7 @@ export default function MenuCard() {
       </div>
     </div>
     <p>Add your menu here : </p>
-    <form className="w-full max-w-sm">
+    <form  onSubmit={handleSubmit} className="w-full max-w-sm">
       <label className="block text-left max-width 100%">
         <span className="text-gray-700">Pick a day</span>
         <select className="form-select block w-full mt-1"
@@ -138,7 +140,7 @@ export default function MenuCard() {
         type="text" value={dessert}
         onChange={(e) => setDessert(e.target.value)}></input>
       </div>
-      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="button" onClick={handleMenuClick}>
+      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit">
         + Add
       </button>
       <p> {day} </p>

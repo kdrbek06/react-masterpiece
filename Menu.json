@@ -1,0 +1,16 @@
+{
+    "menu": [
+        {   
+            "day": "Monday",
+            "starter": "Potage du jour",
+            "main": "Pomme d'amour",
+            "dessert": "Salade du fruits"
+        },
+        {
+            "day": "Tuesday",
+            "starter": "Croquette crevette",
+            "main": "Moules Frites",
+            "dessert": "Mousse au chocolat"
+        }
+    ]
+}
