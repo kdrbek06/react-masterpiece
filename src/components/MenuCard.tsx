@@ -6,12 +6,15 @@ export default function MenuCard() {
 
   const [day, setDay] = useState("Monday");
   const [starter, setStarter] = useState("");
+  const [priceStarter, setPriceStarter] = useState("");
   const [main, setMain] = useState("");
+  const [priceMain, setPriceMain] = useState("");
   const [dessert, setDessert] = useState("");
+  const [priceDessert, setPriceDessert] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const menu = { day, starter, main, dessert}
+    const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert, }
     console.log(menu);
     fetch('')
   }
@@ -24,6 +27,9 @@ export default function MenuCard() {
     .then((data) => {
       console.log(data);
       setMenu(data);
+      setPriceStarter(priceStarter)
+      setPriceMain(priceMain)
+      setPriceDessert(priceDessert)
     });
   }, []);
 
@@ -141,26 +147,38 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={starter}
         onChange={(e) => setStarter(e.target.value)}></input>
+        <label htmlFor="price">price</label>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+        type="text" value={priceStarter}
+        onChange={(e) => setPriceStarter(e.target.value)}></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">main</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={main}
         onChange={(e) => setMain(e.target.value)}></input>
+        <label htmlFor="price">price</label>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+        type="text" value={priceMain}
+        onChange={(e) => setPriceMain(e.target.value)}></input>
       </div>
       <div className="flex items-center border-b border-teal-500 py-2">
         <label htmlFor="starter">dessert</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={dessert}
         onChange={(e) => setDessert(e.target.value)}></input>
+        <label htmlFor="price">price</label>
+        <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+        type="text" value={priceDessert}
+        onChange={(e) => setPriceDessert(e.target.value)}></input>
       </div>
       <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit">
         + Add
       </button>
-      <p> {day} </p>
-      <p> {starter}</p>
-      <p> {main}</p>
-      <p> {dessert}</p>
+      <p> {day}</p>
+      <p> {starter} {priceStarter}</p>
+      <p> {main} {priceMain}</p>
+      <p> {dessert} {priceDessert}</p>
     </form>
     </>
   )
