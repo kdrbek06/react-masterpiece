@@ -1,0 +1,98 @@
+[
+    {   "id": 1,
+        "day": "Monday",
+        "starter": {
+            "name": "Potage du jour",
+            "price": 4.20
+        }, 
+        "main": {
+            "name":"Pomme d'amour",
+            "price": 6.90
+        },  
+        "dessert": {
+            "name": "Salade du fruits", 
+            "price": 4.20
+        } 
+    },
+    {
+        "id": 2,
+        "day": "Tuesday",
+        "starter": {
+            "name": "Croquette crevette",
+            "price": 4.20
+        },
+        "main": {
+            "name": "Moules Frites", 
+            "price": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au chocolat", 
+            "price": 4.20
+        }
+    },
+    {
+        "id": 3,
+        "day": "Wednesday",
+        "starter": {
+            "name": "Croquette fromage", 
+            "price": 4.20
+        },
+        "main": {
+            "name": "Pain Saucisse", 
+            "price": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au fraise", 
+            "price": 4.20
+        }
+    },
+    {
+        "id": 4,
+        "day": "Thursday", 
+        "starter": {
+            "name": "Croquette duo", 
+            "price": 4.20
+        },
+        "main": {
+            "name": "Pain Fromage", 
+            "price": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au Camembert", 
+            "price": 4.20
+        }
+    },
+    {
+        "id": 5,
+        "day": "Friday",
+        "starter": {
+            "name": "Cocktail of crevettes", 
+            "price": 4.20
+        },
+        "main":{ 
+            "name": "Panette poison", 
+            "price": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au Brie", 
+            "price": 4.20
+        }
+    },
+    {
+        "id": 6,
+        "day": "Saturday",
+        "starter": {
+            "name": "Carpaccio", 
+            "price": 4.20
+        },
+        "main": {
+            "name":"Pain Jambon", 
+            "price": 6.90
+        },
+        "dessert": {
+            "name":"Tiramisu", 
+            "price": 4.20
+        }
+    }
+]
+

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-
+import MenuData from '../MenuData.json';
 
 export default function MenuCard() {
-  const [menu, setMenu] = useState(null);
-
+  const [menuItem, setMenuItem] = useState(null);
+  const [completeMenu, setCompleteMenu] = useState(MenuData);
   const [day, setDay] = useState("Monday");
   const [starter, setStarter] = useState("");
   const [priceStarter, setPriceStarter] = useState("");
@@ -12,24 +12,29 @@ export default function MenuCard() {
   const [dessert, setDessert] = useState("");
   const [priceDessert, setPriceDessert] = useState("");
 
+  useEffect(() => {
+    localStorage.setItem('menus', JSON.stringify(completeMenu))
+  }, [completeMenu])
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert, }
-    console.log(menu);
-    fetch('')
+    const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
+    console.log([menu]);
   }
 
   useEffect(() => {
+    console.log(MenuData);
     fetch('http://localhost:8000/menu')
     .then(res => {
       return res.json();
     })
     .then((data) => {
       console.log(data);
-      setMenu(data);
-      setPriceStarter(priceStarter)
-      setPriceMain(priceMain)
-      setPriceDessert(priceDessert)
+      setMenuItem(data);
+      setPriceStarter(priceStarter);
+      setPriceMain(priceMain);
+      setPriceDessert(priceDessert);
+      console.log(menuItem);
     });
   }, []);
 
@@ -172,7 +177,7 @@ export default function MenuCard() {
         type="text" value={priceDessert}
         onChange={(e) => setPriceDessert(e.target.value)}></input>
       </div>
-      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit">
+      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit" >
         + Add
       </button>
       <p> {day}</p>
