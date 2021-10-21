@@ -10,7 +10,7 @@ export interface IAppProps {
 
 export default function App(props: IAppProps) {
   return (
-    <div className="text-center bg-yellow-300 px-6 py-16">
+    <div className="text-center bg-gray-500 px-6 py-16">
 
       <h2 className="text-3xl font-bold" >COLLABORATION</h2>
 

@@ -20,7 +20,7 @@ export default function MenuCard() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8000/menu')
+    fetch('http://localhost:3000/menu')
     .then(res => {
       return res.json();
     })

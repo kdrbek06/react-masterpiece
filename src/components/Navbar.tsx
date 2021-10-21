@@ -7,15 +7,18 @@ export interface IAppProps {
 
 export default function App(props: IAppProps) {
   return (
-    <nav className="flex item-center justify-between flex-wrap bg-gray-400 p-6">
+    <nav className="flex items-center flex-wrap bg-gray-400 p-6">
 
-      <div className="flex item-center flex-shrink-0 text-white mr-6">
-        <Link to="/"> <span className="font-bold text-xl">Brand Name</span> </Link>
-      </div>
+     
 
-      <div className="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
+      <div className="items-center justify-center w-full block flex-grow sm:flex sm:items-center sm:w-auto">
         <Link to="/Menus" className="navLinks">Menus</Link>
         <Link to="/Reviews" className="navLinks">Reviews</Link>
+
+        <div className="flex items-center justify-self-center">
+        <Link to="/"> <span className=" flex flex-shrink-0 text-white font-bold text-3xl">KITCHEN</span> </Link>
+        </div>
+
         <Link to="/Payments" className="navLinks">Collaboration</Link>
         <a href="#contacts" className="navLinks">Contact</a>
       </div>

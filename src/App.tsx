@@ -22,7 +22,6 @@ function App() {
           <Route path="/" exact component={MainPage}></Route>
           <Route path="/Menus" component={Menus}></Route>
           <Route path="/Reviews" component={Reviews}></Route>
-          <Route path="/Payments" component={Payments}></Route>
         </Switch>
       </Router>
 
