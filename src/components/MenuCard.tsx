@@ -16,12 +16,7 @@ export default function MenuCard() {
     localStorage.setItem('menus', JSON.stringify(completeMenu))
   }, [completeMenu])
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
-    console.log([menu]);
-  }
-
+  
   useEffect(() => {
     console.log(MenuData);
     fetch('http://localhost:8000/menu')
@@ -37,6 +32,42 @@ export default function MenuCard() {
       console.log(menuItem);
     });
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
+    const menuLength = MenuData.length;
+    const id = menuLength;
+    const day = "day";
+    const starterName = "starter";
+    const priceStarter = 4.20;
+    const mainName = "main";
+    const priceMain = 6.99;
+    const dessertName = "dessert";
+    const priceDessert = 4.20;
+
+    const newMenuItem = {
+      id: id,
+      day: day,
+      starter: {
+        name: starterName,
+        priceStarter: priceStarter
+      },
+      main: {
+          name: mainName, 
+          priceMain: priceMain
+      },
+      dessert: {
+          name: dessertName, 
+          priceDessert: priceDessert
+      }
+    
+    }
+    
+    setCompleteMenu([...completeMenu, newMenuItem]);
+  }
+
+
 
   return (
     <>
@@ -152,7 +183,7 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={starter}
         onChange={(e) => setStarter(e.target.value)}></input>
-        <label htmlFor="price">price</label>
+        <label htmlFor="priceStarter">price</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceStarter}
         onChange={(e) => setPriceStarter(e.target.value)}></input>
@@ -162,7 +193,7 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={main}
         onChange={(e) => setMain(e.target.value)}></input>
-        <label htmlFor="price">price</label>
+        <label htmlFor="priceMain">price</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceMain}
         onChange={(e) => setPriceMain(e.target.value)}></input>
@@ -172,7 +203,7 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={dessert}
         onChange={(e) => setDessert(e.target.value)}></input>
-        <label htmlFor="price">price</label>
+        <label htmlFor="priceDessert">price</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceDessert}
         onChange={(e) => setPriceDessert(e.target.value)}></input>
