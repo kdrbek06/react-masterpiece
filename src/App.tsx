@@ -8,6 +8,7 @@ import Reviews from './components/Reviews';
 import Payments from './components/Payments';
 import Footer from './components/Footer';
 import Menus from './components/Menus';
+import CookDetails from './components/CookDetails';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" exact component={MainPage}></Route>
           <Route path="/Menus" component={Menus}></Route>
           <Route path="/Reviews" component={Reviews}></Route>
+          <Route path="/Cookdetails/:id" component={CookDetails}></Route>
         </Switch>
       </Router>
 

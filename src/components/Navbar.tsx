@@ -17,7 +17,7 @@ export default function App(props: IAppProps) {
       <div className="">
         <Link to="/Menus" className="navLinks">MENUS</Link>
         <Link to="/Reviews" className="navLinks">REVIEWS</Link>
-        <Link to="/Payments" className="navLinks">COLLABORATION</Link>
+        <Link to="/Cookdetails" className="navLinks">COOKDETAILS</Link>
         <Link to="/Login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 md:mt-0">LOGIN</Link>
       </div>
 
