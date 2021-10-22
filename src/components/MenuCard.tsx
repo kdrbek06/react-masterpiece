@@ -70,6 +70,7 @@ export default function MenuCard() {
     console.log({priceMain})    
     console.log({priceDessert})
     setCompleteMenu([...completeMenu, newMenuItem]);
+    console.log(completeMenu)
   }
 
 
@@ -82,21 +83,21 @@ export default function MenuCard() {
           Menu Card
         </div>
           <div className="grid grid-cols-3 grid-template-columns: repeat(6, minmax(0, 1fr))">
-            <div className="border-solid border-2 bg-green-300 text-center">Monday
+            <div className="border-solid border-2 bg-green-300 text-center">{day}
                 <div className="underline bg-white">
-                  <p className="name">starter</p>
-                  <p className="price">price</p>
+                  <p className="name">{starter}</p>
+                  <p className="price">{priceStarter}</p>
                 </div>
                 <div className="underline  bg-white">
-                  <p className="name">main</p>
-                  <p className="price">price</p>
+                  <p className="name">{main}</p>
+                  <p className="price">{priceMain}</p>
                 </div>
                 <div className="underline bg-white">
-                  <p className="name">Dessert</p>
-                  <p className="price">price</p>
+                  <p className="name">{dessert}</p>
+                  <p className="price">{priceDessert}</p>
                 </div>
             </div>
-            <div className="border-solid border-2 bg-green-300 text-center">Tuesday
+            {/* <div className="border-solid border-2 bg-green-300 text-center">Tuesday
                 <div className="underline bg-white ">
                   <p className="name">Starter</p>
                   <p className="price">price</p>
@@ -165,7 +166,7 @@ export default function MenuCard() {
                 <p className="name">Dessert</p>
                 <p className="price">price</p>
               </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
