@@ -36,7 +36,7 @@ export default function App(props: IAppProps) {
 
 
 
-        <div className="footerSocial flex flex-1 flex-col px-2">
+        <div className="footerSocial flex flex-1 flex-col px-2" id="contacts">
           <h4 className="py-4">SOCIAL MEDIA</h4>
 
           <IconContext.Provider value={{ className: "react-icons", size: '1.5rem', style: { verticalAlign: 'middle' } }}>
