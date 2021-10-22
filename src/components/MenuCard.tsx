@@ -4,7 +4,7 @@ import MenuData from '../MenuData.json';
 export default function MenuCard() {
   const [menuItem, setMenuItem] = useState(null);
   const [completeMenu, setCompleteMenu] = useState(MenuData);
-  const [day, setDay] = useState("Monday");
+  const [day, setDay] = useState("");
   const [starter, setStarter] = useState("");
   const [priceStarter, setPriceStarter] = useState("");
   const [main, setMain] = useState("");
@@ -38,7 +38,8 @@ export default function MenuCard() {
     // const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
     const menuLength = MenuData.length;
     const id = menuLength;
-    const day = "day";
+    const day = "day"; /*LINK DEZE SHIT VERDER ;) ni me {} maar via menudata gelak ID*/
+    console.log(day);
     const starterName = "starter";
     const priceStarter = 4.20;
     const mainName = "main";
