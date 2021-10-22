@@ -6,7 +6,7 @@ export default function MenuCard() {
   const [completeMenu, setCompleteMenu] = useState(MenuData);
   const [day, setDay] = useState("");
   const [starter, setStarter] = useState("");
-  const [priceStarter, setPriceStarter] = useState("");
+  const [priceStarter, setPriceStarter] = useState('');
   const [main, setMain] = useState("");
   const [priceMain, setPriceMain] = useState("");
   const [dessert, setDessert] = useState("");
@@ -38,33 +38,37 @@ export default function MenuCard() {
     // const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
     const menuLength = MenuData.length;
     const id = menuLength;
-    const day = "day"; /*LINK DEZE SHIT VERDER ;) ni me {} maar via menudata gelak ID*/
-    console.log(day);
-    const starterName = "starter";
-    const priceStarter = 4.20;
-    const mainName = "main";
-    const priceMain = 6.99;
-    const dessertName = "dessert";
-    const priceDessert = 4.20;
+    const menuDay = day;/*LINK DEZE SHIT VERDER ;) ni me {} maar via menudata gelak ID*/
+    console.log(menuDay);
+    const starterName = starter;
+    const newPriceStarter = parseFloat(priceStarter) ;
+    console.log(priceStarter)
+    const mainName = main;
+    const newPriceMain = parseFloat(priceMain);
+    const dessertName = dessert;
+    const newPriceDessert = parseFloat(priceDessert);
 
     const newMenuItem = {
       id: id,
-      day: day,
+      day: menuDay,
       starter: {
         name: starterName,
-        priceStarter: priceStarter
+        priceStarter: newPriceStarter 
       },
       main: {
           name: mainName, 
-          priceMain: priceMain
+          priceMain: newPriceMain
       },
       dessert: {
           name: dessertName, 
-          priceDessert: priceDessert
+          priceDessert: newPriceDessert
       }
-    
     }
-    
+    console.log(day);
+    console.log(MenuData[1])//each day between []
+    console.log({priceStarter})//price of  dish
+    console.log({priceMain})    
+    console.log({priceDessert})
     setCompleteMenu([...completeMenu, newMenuItem]);
   }
 
@@ -171,6 +175,7 @@ export default function MenuCard() {
         <span className="text-gray-700">Pick a day</span>
         <select className="form-select block w-full mt-1"
         value={day} onChange={(e) => setDay(e.target.value)}>
+            <option selected >DAY OF THE WEEK</option>
             <option>Monday</option>
             <option>Tuesday</option>
             <option>Wednesday</option>
