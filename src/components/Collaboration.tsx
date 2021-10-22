@@ -10,7 +10,7 @@ export interface IAppProps {
 
 export default function App(props: IAppProps) {
   return (
-    <div className="text-center bg-gray-500 px-6 py-16">
+    <div className="text-center bg-yellow-200 px-6 py-24">
 
       <h2 className="text-3xl font-bold" >COLLABORATION</h2>
 
@@ -21,8 +21,6 @@ export default function App(props: IAppProps) {
         <img src={Coll1} className="w-12 rounded-full" />
         <img src={Coll2} className="w-12 rounded-full" />
       </div>
-
-
 
     </div>
 

@@ -14,7 +14,7 @@ export default function ReviewCard({ image, comment, name, date }: IAppProps) {
 
   return (
 
-    <div className="testimonial flex text-center sm:w-5/12 p-6 my-8 border-2 border-solid rounded-2xl bg-white bg-opacity-40 hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
+    <div className="testimonial flex text-center sm:w-2/5 max-w-lg p-6 m-4 border-2 border-solid rounded-2xl bg-white bg-opacity-40 hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
 
       <img src={image} alt="profile image" className="m-2 w-20 rounded-full"></img>
 

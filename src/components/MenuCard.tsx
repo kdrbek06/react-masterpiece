@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-
+import MenuData from '../MenuData.json';
 
 export default function MenuCard() {
-  const [menu, setMenu] = useState(null);
-
+  const [menuItem, setMenuItem] = useState(null);
+  const [completeMenu, setCompleteMenu] = useState(MenuData);
   const [day, setDay] = useState("Monday");
   const [starter, setStarter] = useState("");
   const [priceStarter, setPriceStarter] = useState("");
@@ -12,26 +12,62 @@ export default function MenuCard() {
   const [dessert, setDessert] = useState("");
   const [priceDessert, setPriceDessert] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert, }
-    console.log(menu);
-    fetch('')
-  }
-
   useEffect(() => {
-    fetch('http://localhost:3000/menu')
+    localStorage.setItem('menus', JSON.stringify(completeMenu))
+  }, [completeMenu])
+
+  
+  useEffect(() => {
+    console.log(MenuData);
+    fetch('http://localhost:8000/menu')
     .then(res => {
       return res.json();
     })
     .then((data) => {
       console.log(data);
-      setMenu(data);
-      setPriceStarter(priceStarter)
-      setPriceMain(priceMain)
-      setPriceDessert(priceDessert)
+      setMenuItem(data);
+      setPriceStarter(priceStarter);
+      setPriceMain(priceMain);
+      setPriceDessert(priceDessert);
+      console.log(menuItem);
     });
   }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
+    const menuLength = MenuData.length;
+    const id = menuLength;
+    const day = "day";
+    const starterName = "starter";
+    const priceStarter = 4.20;
+    const mainName = "main";
+    const priceMain = 6.99;
+    const dessertName = "dessert";
+    const priceDessert = 4.20;
+
+    const newMenuItem = {
+      id: id,
+      day: day,
+      starter: {
+        name: starterName,
+        priceStarter: priceStarter
+      },
+      main: {
+          name: mainName, 
+          priceMain: priceMain
+      },
+      dessert: {
+          name: dessertName, 
+          priceDessert: priceDessert
+      }
+    
+    }
+    
+    setCompleteMenu([...completeMenu, newMenuItem]);
+  }
+
+
 
   return (
     <>
@@ -147,7 +183,7 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={starter}
         onChange={(e) => setStarter(e.target.value)}></input>
-        <label htmlFor="price">price</label>
+        <label htmlFor="priceStarter">price</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceStarter}
         onChange={(e) => setPriceStarter(e.target.value)}></input>
@@ -157,7 +193,7 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={main}
         onChange={(e) => setMain(e.target.value)}></input>
-        <label htmlFor="price">price</label>
+        <label htmlFor="priceMain">price</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceMain}
         onChange={(e) => setPriceMain(e.target.value)}></input>
@@ -167,12 +203,12 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={dessert}
         onChange={(e) => setDessert(e.target.value)}></input>
-        <label htmlFor="price">price</label>
+        <label htmlFor="priceDessert">price</label>
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceDessert}
         onChange={(e) => setPriceDessert(e.target.value)}></input>
       </div>
-      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit">
+      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit" >
         + Add
       </button>
       <p> {day}</p>

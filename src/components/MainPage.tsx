@@ -74,18 +74,18 @@ export default function MainPage() {
 
 
 
-            <div className="text-center bg-gray-400 py-16">
-                <h2 className="my-8 text-3xl font-bold" >COOKS</h2>
-                <div className="flex flex-wrap text-center items-center justify-around p-24">
+            <div className="text-center bg-yellow-200 py-8">
+                <h2 className="my-4 text-3xl font-bold" >COOKS</h2>
+                <div className="flex flex-wrap text-center items-center justify-evenly p-8">
                     {COOKS.map((skill, index) => <Cooks key={skill.name + index} {...skill} />)}
                 </div>
             </div>
 
 
 
-            <div className="text-center bg-gray-400 p-8">
+            <div className="text-center bg-gray-300 p-8">
                 <h2 className="my-8 text-3xl font-bold" >OUR CLIENTS LOVE US</h2>
-                <div className="flex flex-wrap text-center items-center justify-around">
+                <div className="flex flex-wrap text-center items-center justify-center">
                     {reviews.map((review) => <ReviewCard {...review} />)}
                 </div>
             </div>

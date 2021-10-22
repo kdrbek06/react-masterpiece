@@ -16,7 +16,10 @@ function App() {
     <div className="App">
       
       <Router>
+
         <Navbar/>
+    
+        
 
         <Switch>
           <Route path="/" exact component={MainPage}></Route>

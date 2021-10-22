@@ -1,0 +1,98 @@
+[
+    {   "id": 1,
+        "day": "Monday",
+        "starter": {
+            "name": "Potage du jour",
+            "priceStarter": 4.20
+        }, 
+        "main": {
+            "name":"Pomme d'amour",
+            "priceMain": 6.90
+        },  
+        "dessert": {
+            "name": "Salade du fruits", 
+            "priceDessert": 4.20
+        } 
+    },
+    {
+        "id": 2,
+        "day": "Tuesday",
+        "starter": {
+            "name": "Croquette crevette",
+            "priceStarter": 4.20
+        },
+        "main": {
+            "name": "Moules Frites", 
+            "priceMain": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au chocolat", 
+            "priceDessert": 4.20
+        }
+    },
+    {
+        "id": 3,
+        "day": "Wednesday",
+        "starter": {
+            "name": "Croquette fromage", 
+            "priceStarter": 4.20
+        },
+        "main": {
+            "name": "Pain Saucisse", 
+            "priceMain": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au fraise", 
+            "priceDessert": 4.20
+        }
+    },
+    {
+        "id": 4,
+        "day": "Thursday", 
+        "starter": {
+            "name": "Croquette duo", 
+            "priceStarter": 4.20
+        },
+        "main": {
+            "name": "Pain Fromage", 
+            "priceMain": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au Camembert", 
+            "priceDessert": 4.20
+        }
+    },
+    {
+        "id": 5,
+        "day": "Friday",
+        "starter": {
+            "name": "Cocktail of crevettes", 
+            "priceStarter": 4.20
+        },
+        "main":{ 
+            "name": "Panette poison", 
+            "priceMain": 6.90
+        },
+        "dessert": {
+            "name": "Mousse au Brie", 
+            "priceDessert": 4.20
+        }
+    },
+    {
+        "id": 6,
+        "day": "Saturday",
+        "starter": {
+            "name": "Carpaccio", 
+            "priceStarter": 4.20
+        },
+        "main": {
+            "name":"Pain Jambon", 
+            "priceMain": 6.90
+        },
+        "dessert": {
+            "name":"Tiramisu", 
+            "priceDessert": 4.20
+        }
+    }
+]
+

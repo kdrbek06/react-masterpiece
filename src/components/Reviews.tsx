@@ -148,7 +148,7 @@ export default function Reviews() {
 
 
 
-      <div className="flex flex-wrap text-center items-center justify-around">
+      <div className="flex flex-wrap text-center items-center justify-center">
         {reviews.map((review) => <ReviewCard {...review} />)}
       </div>
 

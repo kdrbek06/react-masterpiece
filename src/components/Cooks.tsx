@@ -8,7 +8,7 @@ export interface IAppProps {
 export default function Card({ image, name, description }: IAppProps) {
 
   return (
-    <div className="flex flex-col sm:w-72 w-full p-8 rounded-2xl bg-white bg-opacity-40 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110">
+    <div className="flex flex-col sm:w-72 w-full m-4 p-4 rounded-2xl bg-white bg-opacity-40 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110">
 
       <img  className="rounded-full m-auto mb-6 w-32" src={image} alt="" />
       <p>{name}</p>
