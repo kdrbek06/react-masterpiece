@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Link } from 'react-router-dom'
 
 
-export interface IAppProps {
+export interface ICook {
   image: any;
   name: string;
   description: string;
   id: number;
 }
 
-export default function Card({ image, name, description, id }: IAppProps) {
+export default function Card({ image, name, description, id }: ICook) {
 
   return (
     <div className="flex flex-col sm:w-72 w-full m-4 p-4 rounded-2xl bg-white bg-opacity-40 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
 import Navbar from '../src/components/Navbar';
@@ -13,6 +13,9 @@ import CookDetails from './components/CookDetails';
 
 
 function App() {
+  
+
+
   return (
     <div className="App">
       
