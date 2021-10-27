@@ -1,0 +1,50 @@
+[
+    {
+        "image": "cook1.jpg",
+        "name": "Bert",
+        "surname": "Heyman",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo totam facilis aliquid!",
+        "id": 1,
+        "phone" : "+32 455 23 43 53",
+        "city" : "Ghent",
+        "email" : "cheftylor@mykitchen.com",
+        "birthday" : "1 april 1990",
+        "gender" : "Male"
+    },
+    {
+        "image": "cook2.jpg",
+        "name": "Erwin",
+        "surname": "Heyman",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo totam facilis aliquid!",
+        "id": 2,
+        "phone" : "+32 455 23 43 53",
+        "city" : "Brussel",
+        "email" : "cheftylor@mykitchen.com",
+        "birthday" : "1 april 1990",
+        "gender" : "Male"
+    },
+    {
+        "image": "cook3.jpg",
+        "name": "Basile",
+        "surname": "Heyman",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo totam facilis aliquid!",
+        "id": 3,
+        "phone" : "+32 455 23 43 53",
+        "city" : "Ghent",
+        "email" : "cheftylor@mykitchen.com",
+        "birthday" : "1 april 1990",
+        "gender" : "Male"
+    },
+    {
+        "image": "cook4.jpg",
+        "name": "Sharon",
+        "surname": "Heyman",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo totam facilis aliquid!",
+        "id": 4,
+        "phone" : "+32 455 23 43 53",
+        "city" : "Antwerp",
+        "email" : "cheftylor@mykitchen.com",
+        "birthday" : "1 april 1990",
+        "gender" : "Female"
+    }
+]

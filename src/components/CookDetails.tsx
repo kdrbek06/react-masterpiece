@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
-import { COOKS } from './MainPage';
+import CooksData from '../data/CooksData.json';
 import { ICook } from './Cooks';
+import CookCard from './CookCard'
 
 
 import { RiMapPinLine } from "react-icons/ri";
@@ -23,30 +24,35 @@ export default function CookDetails(props: IAppProps) {
     const [state, setState] = useState<'about' | 'reviews'>('about')
 
     // const cook = COOKS.filter((item) => item.id.toString() === id)[0]
-    
+
     // const cook =  data.filter((item) => item.id.toString() === id)[0]
 
 
 
-    const [cook, setCook] = useState< ICook | undefined >(undefined)
+    // const [cook, setCook] = useState<ICook | undefined>(undefined)
 
 
-// DATABASE
-
-useEffect(() => {
-    fetch(`http://localhost:3000/cooks?id=${id}`)
-    .then((result) => result.json())
-    .then(data => setCook(data))
-    .catch((err) => console.log(err))
-}, [])
 
 
+
+
+
+
+        const cook = CooksData.filter((cook) => cook.id.toString() == id)[0]
+
+        
 
 
     return (
         <div>
             <div className="w-full p-10 m-auto">
-                <img src={require('../image/cook1.jpg').default} alt="" className="" /><br />
+
+                {/* <img src={require("./../image/cook1.jpg").default} alt="" className="" /><br /> */}
+
+
+                <img src={require(`./../image/${cook?.image}`).default} alt="" className="" /><br />
+
+
                 <hr /><p><strong>Description: </strong> {cook?.description}</p><br />
                 <hr /><span><strong>Rating</strong> </span>
             </div>
@@ -58,10 +64,10 @@ useEffect(() => {
                     <p><span><RiMapPinLine /></span> Location</p>
                 </IconContext.Provider>
 
-                <button onClick={() => state !== 'about' && setState('about') }>About</button>
+                <button onClick={() => state !== 'about' && setState('about')}>About</button>
                 <button onClick={() => state !== 'reviews' && setState('reviews')}>Reviews</button>
                 <div>
-                    {state === 'about' ? <p>{cook?.name}</p> : <p>Reviews</p>}
+                    {state === 'about' ? <p><CookCard /></p> : <p>Reviews</p>}
                 </div>
 
 
@@ -73,3 +79,8 @@ useEffect(() => {
 
 
 
+
+
+// console.log({cook});
+//         const jsonString = JSON.stringify({link: "./../image/cook1.jpg"});
+//         console.log({jsonString});

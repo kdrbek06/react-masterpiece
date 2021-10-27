@@ -1,0 +1,26 @@
+[
+    {
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "Great food, would order again. Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+        "date": "02/01/21"
+    },
+    {
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "consectetur adipisicing elit. Porro, adipisci ratione.Great food, would order again",
+        "date": "02/01/21"
+    }, 
+    {
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "Great food, would order again. Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+        "date": "02/01/21"
+    },
+    {
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "adipisicing elit. Porro, adipisci ratione.Great food, would order again",
+        "date": "02/01/21"
+    }
+]
