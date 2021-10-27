@@ -36,3 +36,20 @@
 {
     display: block
 }
+
+
+
+
+dt {
+    float: left;
+    clear: both;
+    min-width: 6em;
+    font-weight: bold;
+}
+dt:after {
+    content: ":";
+}
+dd {
+    float: left;
+    min-width: 8em;
+}

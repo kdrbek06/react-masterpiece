@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import CooksData from '../data/CooksData.json';
+import ReviewsData from '../data/ReviewsData.json';
+import ReviewCard from './ReviewCard';
+
 import { ICook } from './Cooks';
-import CookCard from './CookCard'
+import CookAbout from './CookAbout'
 
 
 import { RiMapPinLine } from "react-icons/ri";
@@ -38,10 +41,10 @@ export default function CookDetails(props: IAppProps) {
 
 
 
-        const cook = CooksData.filter((cook) => cook.id.toString() == id)[0]
+    const cook = CooksData.filter((cook) => cook.id.toString() == id)[0]
 
-        
-
+    const cookReviews = ReviewsData.filter((review) => review.cookId.toString() == id)
+    
 
     return (
         <div>
@@ -58,16 +61,22 @@ export default function CookDetails(props: IAppProps) {
             </div>
 
             <div className="w-full p-10 m-auto">
-                <hr /><p><strong>Name: </strong>{cook?.name}</p>
+                <hr /><p><strong>{cook?.name + " " + cook?.surname}</strong></p><br />
 
                 <IconContext.Provider value={{ style: { display: "inline-block" } }}>
                     <p><span><RiMapPinLine /></span> Location</p>
                 </IconContext.Provider>
 
-                <button onClick={() => state !== 'about' && setState('about')}>About</button>
-                <button onClick={() => state !== 'reviews' && setState('reviews')}>Reviews</button>
+                <div className="flex justify-evenly text-center my-4">
+
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => state !== 'about' && setState('about')}>About</button>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => state !== 'reviews' && setState('reviews')}>Reviews</button>
+
+                </div>
+
+
                 <div>
-                    {state === 'about' ? <p><CookCard /></p> : <p>Reviews</p>}
+                    {state === 'about' ? <CookAbout /> : <div>{cookReviews.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}</div>}
                 </div>
 
 
