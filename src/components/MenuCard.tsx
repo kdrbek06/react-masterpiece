@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import MenuData from '../MenuData.json';
 import { v4 as uuidv4 } from 'uuid';
+import MenuDay from './MenuDay';
+import Menus from './Menus';
 
 
 export default function MenuCard() {
@@ -21,19 +23,19 @@ export default function MenuCard() {
 
   
   useEffect(() => {
-    console.log(MenuData);
+    // console.log(MenuData);
     fetch('http://localhost:8000/menu')
     .then(res => {
       return res.json();
     })
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       // setId(id);
       setMenuItem(data);
       setPriceStarter(priceStarter);
       setPriceMain(priceMain);
       setPriceDessert(priceDessert);
-      console.log(menuItem);
+      // console.log(menuItem);
     });
   }, []);
 
@@ -42,10 +44,10 @@ export default function MenuCard() {
     // const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
     const menuLength = MenuData.length;
     const menuDay = day;/*LINK DEZE SHIT VERDER ;) ni me {} maar via menudata gelak ID*/
-    console.log(menuDay);
+    // console.log(menuDay);
     const starterName = starter;
     const newPriceStarter = parseFloat(priceStarter) ;
-    console.log(priceStarter)
+    // console.log(priceStarter)
     const mainName = main;
     const newPriceMain = parseFloat(priceMain);
     const dessertName = dessert;
@@ -67,19 +69,20 @@ export default function MenuCard() {
           priceDessert: newPriceDessert
       }
     }
-    console.log(day);
-    console.log(MenuData[1])//each day between []
-    console.log({priceStarter})//price of  dish
-    console.log({priceMain})    
-    console.log({priceDessert})
+    // console.log(day);
+    // console.log(MenuData[1])//each day between []
+    // console.log({priceStarter})//price of  dish
+    // console.log({priceMain})    
+    // console.log({priceDessert})
     setCompleteMenu([...completeMenu, newMenuItem]);
-    console.log(completeMenu)
+    // console.log(completeMenu)
   }
 
 
 
   return (
     <>
+    <MenuDay></MenuDay>
     <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
       <div className="s p-4 border-4 ">
         <div className="box-border md:box-content h-350 w-800 p-4 border-4 text-center decoration-clone bg-gradient-to-b from-green-100 to-blue-150 text-transparent text-purple-500 text-opacity-50 text-6xl">
