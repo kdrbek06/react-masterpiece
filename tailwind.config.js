@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html', './src/**/*.html'],  darkMode: 'media', // or 'media' or 'class'
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html', './src/**/*.html'], darkMode: 'media', // or 'media' or 'class'
   theme: {
     minHeight: {
       '0': '0',
@@ -8,7 +8,7 @@ module.exports = {
       '2/3': '66vh',
       '3/4': '75%',
       'full': '100%',
-     },
+    },
     extend: {
       backgroundImage: {
         'hero-0': "url('./image/11.jpg')",
@@ -21,12 +21,15 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
-       }
+      }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['active'],
+      backgroundColor: ['group-focus']
+    },
   },
-  
+
   plugins: [],
 }

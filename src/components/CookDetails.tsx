@@ -44,23 +44,19 @@ export default function CookDetails(props: IAppProps) {
     const cook = CooksData.filter((cook) => cook.id.toString() == id)[0]
 
     const cookReviews = ReviewsData.filter((review) => review.cookId.toString() == id)
-    
+
 
     return (
-        <div>
-            <div className="w-full p-10 m-auto">
+        <div className="md:flex">
 
-                {/* <img src={require("./../image/cook1.jpg").default} alt="" className="" /><br /> */}
-
-
+            <div className="w-full p-10 m-auto md:w-1/3">
                 <img src={require(`./../image/${cook?.image}`).default} alt="" className="" /><br />
-
-
                 <hr /><p><strong>Description: </strong> {cook?.description}</p><br />
                 <hr /><span><strong>Rating</strong> </span>
             </div>
 
-            <div className="w-full p-10 m-auto">
+
+            <div className="w-full p-10 mx-auto md:w-2/3">
                 <hr /><p><strong>{cook?.name + " " + cook?.surname}</strong></p><br />
 
                 <IconContext.Provider value={{ style: { display: "inline-block" } }}>
@@ -68,20 +64,14 @@ export default function CookDetails(props: IAppProps) {
                 </IconContext.Provider>
 
                 <div className="flex justify-evenly text-center my-4">
-
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => state !== 'about' && setState('about')}>About</button>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => state !== 'reviews' && setState('reviews')}>Reviews</button>
-
+                    <button className="border-b-2 focus:border-blue-500  font-bold py-2 px-4" onClick={() => state !== 'about' && setState('about')}>About</button>
+                    <button className="border-b-2 focus:border-blue-500  font-bold py-2 px-4" onClick={() => state !== 'reviews' && setState('reviews')}>Reviews</button>
                 </div>
 
-
-                <div>
+                <div className="flex flex-wrap">
                     {state === 'about' ? <CookAbout /> : <div>{cookReviews.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}</div>}
                 </div>
-
-
             </div>
-
         </div>
     );
 }
