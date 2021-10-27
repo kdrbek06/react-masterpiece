@@ -1,0 +1,30 @@
+[
+    {
+        "cookId": 1,
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "comment 1 Great food, would order again. Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+        "date": "02/01/21"
+    },
+    {
+        "cookId": 1,
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "commment 2 consectetur adipisicing elit. Porro, adipisci ratione.Great food, would order again",
+        "date": "02/01/21"
+    }, 
+    {
+        "cookId": 2,
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "comment 3 Great food, would order again. Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+        "date": "02/01/21"
+    },
+    {
+        "cookId": 2,
+        "image": "Coll1",
+        "name": "Piet U.",
+        "comment": "comment 4 adipisicing elit. Porro, adipisci ratione.Great food, would order again",
+        "date": "02/01/21"
+    }
+]
