@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import MenuData from '../MenuData.json';
+import { v4 as uuidv4 } from 'uuid';
+
 
 export default function MenuCard() {
   const [menuItem, setMenuItem] = useState(null);
   const [completeMenu, setCompleteMenu] = useState(MenuData);
+  let [id, setId] = uuidv4();
   const [day, setDay] = useState("");
   const [starter, setStarter] = useState("");
   const [priceStarter, setPriceStarter] = useState('');
@@ -25,6 +28,7 @@ export default function MenuCard() {
     })
     .then((data) => {
       console.log(data);
+      // setId(id);
       setMenuItem(data);
       setPriceStarter(priceStarter);
       setPriceMain(priceMain);
@@ -37,7 +41,6 @@ export default function MenuCard() {
     e.preventDefault();
     // const menu = { day, starter, priceStarter, main,  priceMain, dessert, priceDessert }
     const menuLength = MenuData.length;
-    const id = menuLength;
     const menuDay = day;/*LINK DEZE SHIT VERDER ;) ni me {} maar via menudata gelak ID*/
     console.log(menuDay);
     const starterName = starter;
@@ -49,7 +52,7 @@ export default function MenuCard() {
     const newPriceDessert = parseFloat(priceDessert);
 
     const newMenuItem = {
-      id: id,
+      id: id ,
       day: menuDay,
       starter: {
         name: starterName,
@@ -176,7 +179,7 @@ export default function MenuCard() {
         <span className="text-gray-700">Pick a day</span>
         <select className="form-select block w-full mt-1"
         value={day} onChange={(e) => setDay(e.target.value)}>
-            <option selected >DAY OF THE WEEK</option>
+            <option>DAY OF THE WEEK</option>
             <option>Monday</option>
             <option>Tuesday</option>
             <option>Wednesday</option>
