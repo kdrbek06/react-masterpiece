@@ -3,11 +3,12 @@ import MenuData from '../MenuData.json';
 import { v4 as uuidv4 } from 'uuid';
 import MenuDay from './MenuDay';
 import Menus from './Menus';
+import TestMenu from './TestMenu';
 
 
 export default function MenuCard() {
   const [menuItem, setMenuItem] = useState(null);
-  const [completeMenu, setCompleteMenu] = useState(MenuData);
+  const [completeMenus, setCompleteMenu] = useState(MenuData);
   let [id, setId] = uuidv4();
   const [day, setDay] = useState("");
   const [starter, setStarter] = useState("");
@@ -18,25 +19,28 @@ export default function MenuCard() {
   const [priceDessert, setPriceDessert] = useState("");
 
   useEffect(() => {
-    localStorage.setItem('menus', JSON.stringify(completeMenu))
-  }, [completeMenu])
+    localStorage.setItem('menus', JSON.stringify(completeMenus))
+  }, [completeMenus])
 
   
   useEffect(() => {
-    // console.log(MenuData);
+    console.log(MenuData);
     fetch('http://localhost:8000/menu')
     .then(res => {
       return res.json();
+      
     })
     .then((data) => {
       // console.log(data);
-      // setId(id);
+      setId(id);
       setMenuItem(data);
+      setCompleteMenu(completeMenus)
       setPriceStarter(priceStarter);
       setPriceMain(priceMain);
       setPriceDessert(priceDessert);
       // console.log(menuItem);
-    });
+    })
+    ;
   }, []);
 
   const handleSubmit = (e) => {
@@ -74,14 +78,17 @@ export default function MenuCard() {
     // console.log({priceStarter})//price of  dish
     // console.log({priceMain})    
     // console.log({priceDessert})
-    setCompleteMenu([...completeMenu, newMenuItem]);
-    // console.log(completeMenu)
+    setCompleteMenu([...completeMenus, newMenuItem]);
+    console.log(completeMenus)
+    console.log(newMenuItem)
+    console.log(newMenuItem.day)
   }
 
 
 
   return (
     <>
+    <TestMenu />
     <MenuDay></MenuDay>
     <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
       <div className="s p-4 border-4 ">
@@ -89,7 +96,7 @@ export default function MenuCard() {
           Menu Card
         </div>
           <div className="grid grid-cols-3 grid-template-columns: repeat(6, minmax(0, 1fr))">
-            <div className="border-solid border-2 bg-green-300 text-center">{day}
+            <div className="border-solid border-2 bg-green-300 text-center">{}
                 <div className="underline bg-white">
                   <p className="name">{starter}</p>
                   <p className="price">{priceStarter}</p>
