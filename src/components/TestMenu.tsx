@@ -13,38 +13,29 @@ class TestMenu extends Component {
             
             <div>Test component</div>
             <div>{MenuData.map((menuDetail, id) => {
-                return <h1>
-                {menuDetail.starter.name}
-                {menuDetail.starter.priceStarter}
-                {menuDetail.main.name}
-                {menuDetail.main.priceMain}
-                {menuDetail.dessert.name}
-                {menuDetail.dessert.priceDessert}
-                </h1>
+                return <div className="border-solid border-2 bg-green-300 text-center">{menuDetail.day}
+                        <div className="underline bg-white">
+                            <p className="name">{menuDetail.starter.name}</p>
+                            <p className="price">{menuDetail.starter.priceStarter}</p>
+                            </div>
+                            <div className="underline  bg-white">
+                            <p className="name">{menuDetail.main.name}</p>
+                            <p className="price">{menuDetail.main.priceMain}</p>
+                            </div>
+                            <div className="underline bg-white">
+                            <p className="name">{menuDetail.dessert.name}</p>
+                            <p className="price">{menuDetail.dessert.priceDessert}</p>
+                        </div>
+                </div>
                 })}
             </div>
             </>
+            
         )
     }
     
     // const { id } = useParams<{ id: string }>();
     // const menu = MenuData.map((menu) => <div>{menu.starter}</div>);
-
-    // const newMenuItem = {
-        // id: id ,
-        // day: menuDay,
-        // starter: {
-        //   name: starterName,
-        //   priceStarter: newPriceStarter 
-        // },
-        // main: {
-        //     name: mainName, 
-        //     priceMain: newPriceMain
-        // },
-        // dessert: {
-        //     name: dessertName, 
-        //     priceDessert: newPriceDessert
-        // }
     
 }
 export default TestMenu
