@@ -12,7 +12,7 @@ export default function App(props: IAppProps) {
   const handleRightArrow = () => setImage(image === 2 ? 0 : image + 1)
 
   return (
-    <div className={`mainCarousel min-h-3/4 bg-hero-${image}`}>
+    <div className={`mainCarousel min-h-full bg-hero-${image}`}>
       <div className="flex flex-auto justify-between items-center">
         <span className="carouselArrow" onClick={handleLeftArrow}> &lt;</span>
         <span className="carouselArrow" onClick={handleRightArrow}> &gt;</span>
