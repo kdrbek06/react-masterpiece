@@ -9,6 +9,7 @@ import Payments from './components/Payments';
 import Footer from './components/Footer';
 import Menus from './components/Menus';
 import CookDetails from './components/CookDetails';
+import { UserContext } from './components/UserContext';
 
 
 
@@ -27,7 +28,9 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={MainPage}></Route>
+        <UserContext.Provider value="DOOT DOOT FROM CONTEXT">
           <Route path="/Menus" component={Menus}></Route>
+        </UserContext.Provider>
           <Route path="/Reviews" component={Reviews}></Route>
           <Route path="/Cookdetails/:id" component={CookDetails}></Route>
         </Switch>

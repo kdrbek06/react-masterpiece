@@ -2,7 +2,7 @@
     {   "id": 1,
         "day": "Monday",
         "starter": {
-            "name": "Potage du jour",
+            "name": "Pôtage du jour",
             "priceStarter": 4.20
         }, 
         "main": {
