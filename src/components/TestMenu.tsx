@@ -31,4 +31,4 @@ const TestMenu = () => {
     )
 
 }
-export default TestMenu
+export default TestMenu;

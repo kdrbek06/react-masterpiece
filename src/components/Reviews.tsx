@@ -10,25 +10,25 @@ import Coll1 from '../image/coll1.png'
 
 const reviews = [
   {
-    image: Coll1,
+    image: "avatar.png",
     name: "Piet U.",
     comment: "Great food, would order again",
     date: "02/01/21",
   },
   {
-    image: Coll1,
+    image: "avatar.png",
     name: "Piet U.",
     comment: "Great food, would order again",
     date: "02/01/21",
   },
   {
-    image: Coll1,
+    image: "avatar.png",
     name: "Piet U.",
     comment: "Great food, would order again",
     date: "02/01/21",
   },
   {
-    image: Coll1,
+    image: "avatar.png",
     name: "Piet U.",
     comment: "Great food, would order again",
     date: "02/01/21",

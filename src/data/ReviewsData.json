@@ -1,30 +1,30 @@
 [
     {
         "cookId": 1,
-        "image": "Coll1",
+        "image": "avatar.png",
         "name": "Piet U.",
-        "comment": "comment 1 Great food, would order again. Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+        "comment": "We took the 4 courses menu. It was incredibly good! Mix of fish and (slow cooked) meat. The dessert was amazing. A small family is running the restaurant and I found the atmosphere super cozy. The fact that it was pouring was long forgotten. Highly recommended",
         "date": "02/01/21"
     },
     {
         "cookId": 1,
-        "image": "Coll1",
+        "image": "avatar.png",
         "name": "Piet U.",
-        "comment": "commment 2 consectetur adipisicing elit. Porro, adipisci ratione.Great food, would order again",
+        "comment": "If you're looking for the best restaurant of Antwerp, look no further, you've found it. Perfectly priced, a mix of Asian cultures, the food is to die for. On top of that, you'll feel at home as they go the extra mile to make sure you're enjoying the evening. The expert knowledge of wine and, especially, beers is a definite bonus we won't forget. The fact that it was pouring was long forgotten.",
         "date": "02/01/21"
     }, 
     {
         "cookId": 2,
-        "image": "Coll1",
+        "image": "avatar.png",
         "name": "Piet U.",
-        "comment": "comment 3 Great food, would order again. Lorem, ipsum dolor sit amet consectetur adipisicing elit",
+        "comment": "Great place! Delicious food with Asian influence made and served by dedicated people passionated about their work. Keep up the good work Mistral!",
         "date": "02/01/21"
     },
     {
         "cookId": 2,
-        "image": "Coll1",
+        "image": "avatar.png",
         "name": "Piet U.",
-        "comment": "comment 4 adipisicing elit. Porro, adipisci ratione.Great food, would order again",
+        "comment": "This restaurant has a very friendly staff and serves great French cuisine dishes with fresh ingredients! In times of the Covid-19 they offer tables in line with the national and local measurements, giving you a moment to enjoy their food and your company(bubble) to the max. Keep up the good work Mistral!",
         "date": "02/01/21"
     }
 ]

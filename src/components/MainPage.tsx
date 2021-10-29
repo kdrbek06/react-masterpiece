@@ -9,11 +9,6 @@ import ReviewCard from './ReviewCard';
 import ReviewsData from '../data/ReviewsData.json'
 import CooksData from '../data/CooksData.json'
 
-import Cook1 from '../image/cook1.jpg';
-import Cook2 from '../image/cook2.jpg';
-import Cook3 from '../image/cook3.jpg';
-import Cook4 from '../image/cook4.jpg';
-import Coll1 from '../image/coll1.png'
 
 
 
@@ -40,9 +35,9 @@ export default function MainPage() {
 
 
 
-            <div className="text-center p-8">
+            <div className="text-center p-8 m-8">
                 <h2 className="my-8 text-3xl font-bold" >OUR CLIENTS LOVE US</h2>
-                <div className="flex flex-wrap text-center items-center justify-center">
+                <div className="text-center sm:flex sm:flex-wrap md:m-8">
                     {ReviewsData.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}
                 </div>
             </div>

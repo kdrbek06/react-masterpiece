@@ -80,9 +80,12 @@ export default function MenuCard() {
   return (
     <>
     <div>{msg}</div>
-    <div>{completeMenus.map((completeMenu) => { <div key={completeMenu.id}>
+    {/* {completeMenus.map(menu =>(
+      <tr><TestMenu /></tr>
+    ))} */}
+    {/* <div>{completeMenus.map((completeMenu) => { <div key={completeMenu.id}>
       <TestMenu />
-    </div>})}</div>
+    </div>})}</div> */}
     <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
       <div className="s p-4 border-4 ">
         <div className="box-border md:box-content h-350 w-800 p-4 border-4 text-center decoration-clone bg-gradient-to-b from-green-100 to-blue-150 text-transparent text-purple-500 text-opacity-50 text-6xl">

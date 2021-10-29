@@ -30,7 +30,7 @@ export default function App(props: IAppProps) {
         <div className="footerLinks flex flex-1 flex-col px-2">
           <h4 className="py-4">USEFULL LINKS</h4>
           <ul>
-            <li><a href="" className="hover:text-white">Homepage</a></li>
+            <li><a href="https://google.com" className="hover:text-white">Homepage</a></li>
           </ul>
         </div>
 
@@ -41,10 +41,10 @@ export default function App(props: IAppProps) {
 
           <IconContext.Provider value={{ className: "react-icons", size: '1.5rem', style: { verticalAlign: 'middle' } }}>
 
-            <a className="flex my-2 hover:text-white" href="" target="_blank"><SiGoogle />Google</a>
-            <a className="flex my-2 hover:text-white" href="" target="_blank"><SiFacebook />Facebook</a>
-            <a className="flex my-2 hover:text-white" href="" target="_blank"><SiInstagram />Instagram</a>
-            <a className="flex my-2 hover:text-white" href="" target="_blank"><SiLinkedin />Linkedin</a>
+            <a className="flex my-2 hover:text-white" href="https://google.com"><SiGoogle />Google</a>
+            <a className="flex my-2 hover:text-white" href="https://google.com"><SiFacebook />Facebook</a>
+            <a className="flex my-2 hover:text-white" href="https://google.com"><SiInstagram />Instagram</a>
+            <a className="flex my-2 hover:text-white" href="https://google.com"><SiLinkedin />Linkedin</a>
 
           </IconContext.Provider>
 
