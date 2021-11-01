@@ -1,13 +1,17 @@
-import React, { Component} from 'react';
+import React, { Component, useState} from 'react';
 import MenuData from '../MenuData.json';
+import AddForm from './AddForm';
+import MenuDay from './MenuDay';
 
-console.log("new log: " , MenuData)
+console.log("new log: " , MenuData) 
 
 const TestMenu = () => {
+    // const [useMenu, setUseMenu] = useState(MenuData);
 
     return (
         <>
         <div>Test component</div>
+        {/* <MenuDay /> */}
         <div>{MenuData.map((menuDetail, id) => {
             return <div className="border-solid border-2 bg-pink-300 text-center" key={id}>{menuDetail.day}
                     <div className="underline bg-white">
@@ -22,6 +26,7 @@ const TestMenu = () => {
                         <div className="underline bg-white">
                         <p className="name">{menuDetail.dessert.name}</p>
                         <p className="price">{menuDetail.dessert.priceDessert}</p>
+                        <AddForm />
                     </div>
             </div>
             

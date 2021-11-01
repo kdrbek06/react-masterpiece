@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import MenuData from '../MenuData.json';
 import { v4 as uuidv4 } from 'uuid';
 import MenuDay from './MenuDay';
@@ -80,8 +80,12 @@ export default function MenuCard() {
   return (
     <>
     <div>{msg}</div>
+    <div>{MenuData.map((menuDay, id) => {
+            <MenuDay />
+          })}
+        </div>
     {/* {completeMenus.map(menu =>(
-      <tr><TestMenu /></tr>
+      <div><TestMenu /></div>
     ))} */}
     {/* <div>{completeMenus.map((completeMenu) => { <div key={completeMenu.id}>
       <TestMenu />
@@ -92,7 +96,7 @@ export default function MenuCard() {
           Menu Card
         </div>
         <TestMenu />
-          <div className="grid grid-cols-3 grid-template-columns: repeat(6, minmax(0, 1fr))">
+          {/* <div className="grid grid-cols-3 grid-template-columns: repeat(6, minmax(0, 1fr))">
             <div className="border-solid border-2 bg-purple-300 text-center">{day}
               <div className="underline bg-white">
                 <p className="name">{starter}</p>
@@ -107,11 +111,11 @@ export default function MenuCard() {
                 <p className="price">{priceDessert}</p>
               </div>
             </div>
-        </div>
+        </div> */}
       </div>
     </div>
     {/* <MenuDay></MenuDay> */}
-    <p>Add your menu here : </p>
+    {/* <p>Add your menu here : </p>
     <form  onSubmit={handleSubmit} className="w-full max-w-sm">
       <label className="block text-left max-width 100%">
         <span className="text-gray-700">Pick a day</span>
@@ -155,15 +159,15 @@ export default function MenuCard() {
         <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
         type="text" value={priceDessert}
         onChange={(e) => setPriceDessert(e.target.value)}></input>
-      </div>
-      <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit" >
+      </div> */}
+      {/* <button className="flex-shrink-0 border-solid border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded" type="submit" >
         + Add
-      </button>
-      <p> {day}</p>
+      </button> */}
+      {/* <p> {day}</p>
       <p> {starter} {priceStarter}</p>
       <p> {main} {priceMain}</p>
-      <p> {dessert} {priceDessert}</p>
-    </form>
+      <p> {dessert} {priceDessert}</p> */}
+    {/* </form> */}
     </>
   )
 }
