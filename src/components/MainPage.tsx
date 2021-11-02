@@ -25,7 +25,7 @@ export default function MainPage() {
 
 
 
-            <div className="text-center bg-yellow-200 py-8">
+            <div className="text-center bg-yellow-100 py-8">
                 <h2 className="my-4 text-3xl font-bold" >COOKS</h2>
                 <div className="flex flex-wrap text-center items-center justify-evenly p-8">
                     {CooksData.map((cook, index) => <Cooks key={cook.name + index} {...cook} />)}
