@@ -92,7 +92,7 @@ export default function MenuCard() {
     </div>})}</div> */}
     <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
       <div className="s p-4 border-4 ">
-        <div className="box-border md:box-content h-350 w-800 p-4 border-4 text-center decoration-clone bg-gradient-to-b from-green-100 to-blue-150 text-transparent text-purple-500 text-opacity-50 text-6xl">
+        <div className="box-border md:box-content h-350 w-800 p-4 border-4 text-center bg-yellow-200 bg-opacity-70 py-6 px-16 text-opacity-50 text-6xl text-black">
           Menu Card
         </div>
         <TestMenu />

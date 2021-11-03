@@ -6,7 +6,7 @@ export default function AddForm() {
     return (
         <>
             <button
-                className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="m-2 p-2 bg-yellow-200 rounded-full transition duration-300 ease-in-out hover:bg-blue-500"
                 type="button"
                 onClick={() => setShowModal(true)}
             >
@@ -19,10 +19,10 @@ export default function AddForm() {
           >
             <div className="relative w-auto my-6 mx-auto max-w-3xl">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-gray-200 outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
+                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t bg-yellow-200">
+                  <h3 className="text-3xl font-semibold ">
                     Create a new Menu for this day 
                   </h3>
                   <button
@@ -38,28 +38,28 @@ export default function AddForm() {
                 <div className="relative p-6 flex-auto">
                     <form className="w-full max-w-sm">
                         <div className="flex items-center border-b border-teal-500 py-2">
-                            <label htmlFor="starter">starter</label>
-                            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
-                            type="text"></input>
-                            <label htmlFor="priceStarter">€</label>
-                            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
-                            type="text"></input>
+                          <label htmlFor="starter">starter&nbsp;:&nbsp;</label>
+                          <input className="appearance-none bg-yellow-200 border-solid w-1/2 text-gray-700 mr-3.5 py-1 px-2 leading-tight focus:outline-none" 
+                          type="text"></input>
+                          <label htmlFor="priceStarter">€&nbsp;</label>
+                          <input className="appearance-none bg-yellow-200 bg-transparent border-none w-1/2 text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+                          type="text"></input>
                         </div>
-                        <div className="flex items-center border-b border-teal-500 py-2">
-                            <label htmlFor="starter">   main</label>
-                            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
-                            type="text"></input>
-                            <label htmlFor="priceMain">€</label>
-                            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
-                            type="text"></input>
+                        <div className="flex items-center py-2 px-2 break-normal">
+                          <label htmlFor="main">main&nbsp;:&nbsp;</label>
+                          <input className="appearance-none bg-yellow-200 border-none w-1/2 text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
+                          type="text"></input>
+                          <label htmlFor="priceMain">€&nbsp;</label>
+                          <input className="appearance-none bg-yellow-200 bg-transparent border-none w-1/2 text-gray-700  py-1 px-2 leading-tight focus:outline-none" 
+                          type="text"></input>
                         </div>
-                        <div className="flex items-center border-b border-teal-500 py-2">
-                            <label htmlFor="starter">dessert</label>
-                            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
-                            type="text" ></input>
-                            <label htmlFor="priceDessert">€</label>
-                            <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" 
-                            type="text" ></input>
+                        <div className="flex items-center border-b py-2">
+                          <label htmlFor="dessert">dessert:</label>
+                          <input className="appearance-none bg-yellow-200 border-none w-1/2 text-gray-700 mr-2 py-1 px-2 leading-tight focus:outline-none" 
+                          type="text" ></input>
+                          <label htmlFor="priceDessert">€&nbsp;</label>
+                          <input className="appearance-none bg-yellow-200 bg-transparent border-none w-1/2 text-gray-700 mr-1 py-1 px-2 leading-tight focus:outline-none" 
+                          type="text" ></input>
                         </div> 
                     </form>
                 </div>

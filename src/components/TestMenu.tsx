@@ -13,7 +13,7 @@ const TestMenu = () => {
         <div>Test component</div>
         {/* <MenuDay /> */}
         <div>{MenuData.map((menuDetail, id) => {
-            return <div className="border-solid border-2 bg-pink-300 text-center" key={id}>{menuDetail.day}
+            return <div className="text-center bg-gray-400" key={id}>{menuDetail.day}
                     <div className="underline bg-white">
                         <p>{menuDetail.id}</p>
                         <p className="name">{menuDetail.id} {menuDetail.starter.name}</p>
