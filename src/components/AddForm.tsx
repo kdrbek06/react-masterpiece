@@ -6,7 +6,7 @@ export default function AddForm() {
     return (
         <>
             <button
-                className="m-2 p-2 bg-yellow-200 rounded-full transition duration-300 ease-in-out hover:bg-blue-500"
+                className="m-2 p-2 bg-yellow-200 rounded-full transition duration-300 ease-in-out hover:bg-gray-200"
                 type="button"
                 onClick={() => setShowModal(true)}
             >
