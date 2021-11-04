@@ -1,33 +1,36 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 
 export interface IAppProps {
 }
 
 export default function App(props: IAppProps) {
+
+  const [toggle, setToggle] = useState(false);
+
+
   return (
-    <nav className="items-center justify-between md:flex text-white font-bold bg-black bg-opacity-70 py-6 px-16">
+    <nav className="md:flex items-center justify-between text-white font-bold bg-black bg-opacity-70 p-4 md:py-4 md:px-12">
 
+      <div className="flex justify-between">
 
-      <div className="">
-        <Link to="/"> <span className=" flex flex-shrink-0  font-bold text-3xl">MY-KITCHEN</span> </Link>
+        <Link to="/"> <a className="font-bold text-3xl">MY-KITCHEN</a> </Link>
+
+        <button className="flex flex-col justify-evenly w-8 md:hidden" onClick={() => setToggle(!toggle)}>
+          <span className="h-1 w-full border-2 bg-white rounded-lg"> </span>
+          <span className="h-1 w-full border-2 bg-white rounded-lg"></span>
+          <span className="h-1 w-full border-2 bg-white rounded-lg"></span>
+        </button>
+
       </div>
 
-      <div className="">
+      <div className={"md:block" + (toggle ? " hidden" : "")}>
         <Link to="/menus" className="navLinks">MENUS</Link>
         <Link to="/reviews" className="navLinks">REVIEWS</Link>
         <Link to="/cookdetails" className="navLinks">COOKDETAILS</Link>
-        <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 md:mt-0">LOGIN</Link>
+        <Link to="/login" className="navLinks border-white border-2 p-2 rounded-2xl">LOGIN</Link>
       </div>
-
 
     </nav>
   );
 }
-
-
-// <Link to="/"><button>Home</button></Link>
-//         <Link to="/Login"><button>Login</button></Link>
-//         <Link to="/Reviews"><button>Reviews</button></Link>
-//         <Link to="/Payments"><button>Payment</button></Link>
