@@ -17,12 +17,7 @@ export default function App(props: IAppProps) {
 
       <h2 className="text-3xl font-bold" >COLLABORATION</h2>
 
-
-
-
       <section className="p-10 min-h-screen flex md:flex-row items-center justify-around flex-wrap sm:flex-col">
-
-
 
         <div className="h-32 w-32 relative cursor-pointer mb-5">
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
@@ -39,11 +34,6 @@ export default function App(props: IAppProps) {
         <img src={Coll2} className="w-12 rounded-full" />
 
       </section>
-
-
-
-
-
 
     </div>
 
