@@ -7,8 +7,7 @@ import Reviews from './components/Reviews';
 import Footer from './components/Footer';
 import Menus from './components/Menus';
 import CookDetails from './components/CookDetails';
-import { UserContext } from './components/UserContext';
-
+import {MenuContextProvider} from './contexts/MenuContext';
 
 
 function App() {
@@ -16,26 +15,28 @@ function App() {
 
 
   return (
-    <div className="App">
-      
-      <Router>
-
-        <Navbar/>
-    
+    <MenuContextProvider>
+      <div className="App">
         
+        <Router>
 
-        <Switch>
-          <Route path="/" exact component={MainPage}></Route>
-          <Route path="/reviews" component={Reviews}></Route>
-          <Route path="/cookdetails/:id" component={CookDetails}></Route>
-          <Route path="/menus" component={Menus}></Route>
-          <Route path="/login" component={Login}></Route>
-        </Switch>
-      </Router>
+          <Navbar/>
+      
+          
+
+          <Switch>
+            <Route path="/" exact component={MainPage}></Route>
+            <Route path="/reviews" component={Reviews}></Route>
+            <Route path="/cookdetails/:id" component={CookDetails}></Route>
+            <Route path="/menus" component={Menus}></Route>
+            <Route path="/login" component={Login}></Route>
+          </Switch>
+        </Router>
 
 
-      <Footer/>
-    </div>
+        <Footer/>
+      </div>
+    </MenuContextProvider>
   );
 }
 
