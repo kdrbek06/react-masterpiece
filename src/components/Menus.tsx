@@ -1,10 +1,11 @@
 import React, {useContext} from 'react';
 import MenuCard from './MenuCard';
 import { MenuContext } from '../contexts/MenuContext';
+import AddForm from './AddForm';
 
 export default function Menus() {
   
-  const menus = useContext(MenuContext);
+  const {menus} = useContext(MenuContext);
 
   return (
     <>

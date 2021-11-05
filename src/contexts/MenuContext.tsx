@@ -17,6 +17,7 @@ const MenuContextProvider = (props) => {
     const updateMenu = (id, updatedMenu) => {
         setMenus(menus.map((menu) => menu.id === id ? updatedMenu : menu))
     }
+    
     return(
         <MenuContext.Provider value={{menus, updateMenu}}>
             {props.children}

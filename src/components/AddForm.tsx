@@ -2,23 +2,27 @@ import React, { useContext, useState } from "react";
 import { MenuContext } from "../contexts/MenuContext";
 import MenuData from "../MenuData.json";
 
-export default function AddForm({editedMenu}) {
+export default function AddForm({theMenu}) {
+
+  const id = theMenu.id;
   const {updateMenu} = useContext(MenuContext);
-  // const id = editedMenu.id;
+  
   const [showModal, setShowModal] = React.useState(false);
-  const [nameStarter, setNameStarter] = useState(editedMenu.nameStarter);
-  const [priceStarter, setPriceStarter] = useState(editedMenu.priceStarter);
-  const [nameMain, setNameMain] = useState(editedMenu.nameMain);
-  const [priceMain, setPriceMain] = useState(editedMenu.priceMain);
-  const [nameDessert, setNameDessert] = useState(editedMenu.nameDessert);
-  const [priceDessert, setPriceDessert] = useState(editedMenu.priceDessert);
+  const [nameStarter, setNameStarter] = useState(theMenu.nameStarter);
+  const [priceStarter, setPriceStarter] = useState(theMenu.priceStarter);
+  const [nameMain, setNameMain] = useState(theMenu.nameMain);
+  const [priceMain, setPriceMain] = useState(theMenu.priceMain);
+  const [nameDessert, setNameDessert] = useState(theMenu.nameDessert);
+  const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
+
+
 
 
   console.log("clickedy");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("clickedy");
+    console.log("submit handled");
   };
 
   return (

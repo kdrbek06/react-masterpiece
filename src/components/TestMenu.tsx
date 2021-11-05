@@ -11,30 +11,42 @@ const TestMenu = ({menu}) => {
 
     return (
         <>
-        <div>Test component</div>
+        <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4" key={menu.id}>
+            <div>
+                <div>{menu.id}</div>
+                <div>{menu.day}</div>
+                <div>{menu.nameStarter}</div>
+                <div>{menu.priceStarter}</div>
+                <div>{menu.nameMain}</div>
+                <div>{menu.priceMain}</div>
+                <div>{menu.nameDessert}</div>
+                <div>{menu.priceDessert}</div>
+            </div>
+        </div>
+        
         {/* <MenuDay /> */}
-        <div>{MenuData.map((menuDetail, id) => {
-            return  <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4" key={id}>
-                        <div className="text-center bg-gray-400" key={id}>{menuDetail.day}
-                            <div className="underline bg-white">
-                                <p>{menuDetail.id}</p>
-                                <p className="name">{menuDetail.id} {menuDetail.starter.name}</p>
-                                <p className="price">{menuDetail.starter.priceStarter}</p>
-                                </div>
-                                <div className="underline  bg-white">
-                                <p className="name">{menuDetail.main.name}</p>
-                                <p className="price">{menuDetail.main.priceMain}</p>
-                                </div>
-                                <div className="underline bg-white">
-                                <p className="name">{menuDetail.dessert.name}</p>
-                                <p className="price">{menuDetail.dessert.priceDessert}</p>
+        {/* <div>{menu.map((menuDetail, id) => {
+        return  <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4" key={id}>
+                    <div className="text-center bg-gray-400" key={id}>{menuDetail.day}
+                        <div className="underline bg-white">
+                            <p>{menuDetail.id}</p>
+                            <p className="name">{menuDetail.id} {menuDetail.starter.name}</p>
+                            <p className="price">{menuDetail.starter.priceStarter}</p>
                             </div>
-                            <div><AddForm editedMenu={menu}/></div>
-                        </div>    
-                    </div>
+                            <div className="underline  bg-white">
+                            <p className="name">{menuDetail.main.name}</p>
+                            <p className="price">{menuDetail.main.priceMain}</p>
+                            </div>
+                            <div className="underline bg-white">
+                            <p className="name">{menuDetail.dessert.name}</p>
+                            <p className="price">{menuDetail.dessert.priceDessert}</p>
+                        </div>
+                        <div><AddForm theMenu={menu}/></div>
+                    </div>    
+                </div>
             
             })}
-        </div>
+        </div> */}
         </>
     )
 
