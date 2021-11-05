@@ -15,11 +15,6 @@ export default function AddForm({theMenu}) {
   const [nameDessert, setNameDessert] = useState(theMenu.nameDessert);
   const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
 
-
-
-
-  console.log("clickedy");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("submit handled");

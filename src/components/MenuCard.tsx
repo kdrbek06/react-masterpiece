@@ -21,6 +21,7 @@ export default function MenuCard({menu}) {
   // const [priceDessert, setPriceDessert] = useState("");
   // const [newDay, setNewDay] = useState("");
   const {updateMenu} = useContext(MenuContext);
+  console.log(menu.id)
 
   // useEffect(() => {
   //   localStorage.setItem('menus', JSON.stringify(completeMenus))
