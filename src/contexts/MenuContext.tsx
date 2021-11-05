@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -15,6 +15,15 @@ const MenuContextProvider = (props) => {
         { id: uuidv4(),  day: "Saturday", nameStarter: "Carpaccio", priceStarter: 4.20 , nameMain:"Pain Jambon", priceMain: 6.90 , nameDessert:"Tiramisu", priceDessert: 4.20 }
     ])
     
+    
+    useEffect(() => {
+        setMenus(JSON.parse(localStorage.getItem('menus') || '{}'))
+    },[])
+    
+    useEffect(() => {
+        localStorage.setItem('menus', JSON.stringify(menus));
+    })
+
     const updateMenu = (id, updatedMenu) => {
         setMenus(menus.map((menu) => menu.id === id ? updatedMenu : menu))
     }
