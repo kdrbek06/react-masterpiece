@@ -5,8 +5,6 @@ import MenuData from "../MenuData.json";
 export default function AddForm({theMenu}) {
 
   const id = theMenu.id;
-  const {updateMenu} = useContext(MenuContext);
-  
   const [showModal, setShowModal] = React.useState(false);
   const [nameStarter, setNameStarter] = useState(theMenu.nameStarter);
   const [priceStarter, setPriceStarter] = useState(theMenu.priceStarter);
@@ -14,9 +12,12 @@ export default function AddForm({theMenu}) {
   const [priceMain, setPriceMain] = useState(theMenu.priceMain);
   const [nameDessert, setNameDessert] = useState(theMenu.nameDessert);
   const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
+  const {updateMenu} = useContext(MenuContext);
+  const updatedMenu = {id, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert}
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    updateMenu(id, updatedMenu);
     console.log("submit handled");
   };
 
