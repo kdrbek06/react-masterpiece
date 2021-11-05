@@ -58,49 +58,49 @@ export default function AddForm({theMenu}) {
                   {/*body*/}
                   <div className="relative p-6 flex-auto">
                     <form onSubmit={handleSubmit} className="w-full max-w-sm">
-                      <div className="flex items-center border-b border-teal-500 py-2">
+                      <div className="flex items-center py-2 px-2 break-normal text-base">
                         <label htmlFor="newStarter">starter&nbsp;:&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 border-solid w-full text-gray-700 mr-3.5 py-1 px-2 leading-tight focus:outline-none"
+                          className="appearance-none bg-yellow-200 border-solid text-gray-700 text-base mr-3.5 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={nameStarter}
                           onChange={(e) => setNameStarter(e.target.value)}
                         ></input>
                         <label htmlFor="priceStarter">€&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={priceStarter}
                           onChange={(e) => setPriceStarter(e.target.value)}
                         ></input>
                       </div>
-                      <div className="flex items-center py-2 px-2 break-normal">
+                      <div className="flex items-center py-2 px-2 break-normal text-base">
                         <label htmlFor="main">main&nbsp;:&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
+                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={nameMain}
                           onChange={(e) => setNameMain(e.target.value)}
                         ></input>
                         <label htmlFor="priceMain">€&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700  py-1 px-2 leading-tight focus:outline-none"
+                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={priceMain}
                           onChange={(e) => setPriceMain(e.target.value)}
                         ></input>
                       </div>
-                      <div className="flex items-center border-b py-2">
+                      <div className="flex items-center border-b py-2 text-base">
                         <label htmlFor="dessert">dessert:</label>
                         <input
-                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 mr-2 py-1 px-2 leading-tight focus:outline-none"
+                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={nameDessert}
                           onChange={(e) => setNameDessert(e.target.value)}
                         ></input>
                         <label htmlFor="priceDessert">€&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 mr-1 py-1 px-2 leading-tight focus:outline-none"
+                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-1 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={priceDessert}
                           onChange={(e) => setPriceDessert(e.target.value)}

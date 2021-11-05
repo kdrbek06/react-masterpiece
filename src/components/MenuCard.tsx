@@ -81,14 +81,14 @@ export default function MenuCard({menu}) {
   return (
     <>
     <div>
-      <div>{menu.id}</div>
-      <div>{menu.day}</div>
-      <div>{menu.nameStarter}</div>
-      <div>{menu.priceStarter}</div>
-      <div>{menu.nameMain}</div>
-      <div>{menu.priceMain}</div>
-      <div>{menu.nameDessert}</div>
-      <div>{menu.priceDessert}</div>
+      <div className="text-2xl">{menu.id}</div>
+      <div className="text-2xl">{menu.day}</div>
+      <div className="text-2xl">{menu.nameStarter}</div>
+      <div className="text-2xl">{menu.priceStarter}</div>
+      <div className="text-2xl">{menu.nameMain}</div>
+      <div className="text-2xl">{menu.priceMain}</div>
+      <div className="text-2xl">{menu.nameDessert}</div>
+      <div className="text-2xl">{menu.priceDessert}</div>
     </div>
     <AddForm theMenu={menu}/>
     {/* <TestMenu menu={{menu}} /> */}
