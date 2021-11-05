@@ -89,10 +89,10 @@ export default function MenuCard({menu}) {
       <div>{menu.nameDessert}</div>
       <div>{menu.priceDessert}</div>
     </div>
-    
+    <TestMenu menu={undefined} />
     <div>{msg}</div>
     
-        <TestMenu />
+        
           <div className="grid grid-cols-3 grid-template-columns: repeat(6, minmax(0, 1fr))">
             <div className="border-solid border-2 bg-purple-300 text-center">{day}
               <div className="underline bg-white">
@@ -109,7 +109,7 @@ export default function MenuCard({menu}) {
               </div>
             </div>
         </div>
-    <p>Add your menu here : </p>
+    {/* <p>Add your menu here : </p>
     <form  onSubmit={handleSubmit} className="w-full max-w-sm">
       <label className="block text-left max-width 100%">
         <span className="text-gray-700">Pick a day</span>
@@ -161,7 +161,7 @@ export default function MenuCard({menu}) {
       <p> {day}</p>
       <p> {starter} {priceStarter}</p>
       <p> {main} {priceMain}</p>
-      <p> {dessert} {priceDessert}</p>
+      <p> {dessert} {priceDessert}</p> */}
     
     </>
   )

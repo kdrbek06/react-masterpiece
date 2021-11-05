@@ -14,8 +14,11 @@ const MenuContextProvider = (props) => {
         { id: 6,  day: "Saturday", nameStarter: "Carpaccio", priceStarter: 4.20 , nameMain:"Pain Jambon", priceMain: 6.90 , nameDessert:"Tiramisu", priceDessert: 4.20 }
     ])
     
+    const updateMenu = (id, updatedMenu) => {
+        setMenus(menus.map((menu) => menu.id === id ? updatedMenu : menu))
+    }
     return(
-        <MenuContext.Provider value={{menus}}>
+        <MenuContext.Provider value={{menus, updateMenu}}>
             {props.children}
         </MenuContext.Provider>
     )
