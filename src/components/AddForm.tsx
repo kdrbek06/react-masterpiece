@@ -31,6 +31,7 @@ export default function AddForm({theMenu}) {
       </button>
       {!!showModal && (
         <>
+        <form onSubmit={handleSubmit} className="w-full max-w-sm">
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
               <div className="relative w-auto my-6 mx-auto max-w-3xl">
@@ -52,56 +53,54 @@ export default function AddForm({theMenu}) {
                   </div>
                   {/*body*/}
                   <div className="relative p-6 flex-auto">
-                    <form onSubmit={handleSubmit} className="w-full max-w-sm">
-                      <div className="flex items-center py-2 px-2 break-normal text-base">
-                        <label htmlFor="newStarter">starter&nbsp;:&nbsp;</label>
-                        <input
-                          className="appearance-none bg-yellow-200 border-solid text-gray-700 text-base mr-3.5 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={nameStarter}
-                          onChange={(e) => setNameStarter(e.target.value)}
-                        ></input>
-                        <label htmlFor="priceStarter">€&nbsp;</label>
-                        <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={priceStarter}
-                          onChange={(e) => setPriceStarter(e.target.value)}
-                        ></input>
-                      </div>
-                      <div className="flex items-center py-2 px-2 break-normal text-base">
-                        <label htmlFor="main">main&nbsp;:&nbsp;</label>
-                        <input
-                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={nameMain}
-                          onChange={(e) => setNameMain(e.target.value)}
-                        ></input>
-                        <label htmlFor="priceMain">€&nbsp;</label>
-                        <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={priceMain}
-                          onChange={(e) => setPriceMain(e.target.value)}
-                        ></input>
-                      </div>
-                      <div className="flex items-center border-b py-2 text-base">
-                        <label htmlFor="dessert">dessert:</label>
-                        <input
-                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={nameDessert}
-                          onChange={(e) => setNameDessert(e.target.value)}
-                        ></input>
-                        <label htmlFor="priceDessert">€&nbsp;</label>
-                        <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-1 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={priceDessert}
-                          onChange={(e) => setPriceDessert(e.target.value)}
-                        ></input>
-                      </div>
-                    </form>
+                    <div className="flex items-center py-2 px-2 break-normal text-base">
+                      <label htmlFor="newStarter">starter&nbsp;:&nbsp;</label>
+                      <input
+                        className="appearance-none bg-yellow-200 border-solid text-gray-700 text-base mr-3.5 py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={nameStarter}
+                        onChange={(e) => setNameStarter(e.target.value)}
+                      ></input>
+                      <label htmlFor="priceStarter">€&nbsp;</label>
+                      <input
+                        className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={priceStarter}
+                        onChange={(e) => setPriceStarter(e.target.value)}
+                      ></input>
+                    </div>
+                    <div className="flex items-center py-2 px-2 break-normal text-base">
+                      <label htmlFor="main">main&nbsp;:&nbsp;</label>
+                      <input
+                        className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={nameMain}
+                        onChange={(e) => setNameMain(e.target.value)}
+                      ></input>
+                      <label htmlFor="priceMain">€&nbsp;</label>
+                      <input
+                        className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={priceMain}
+                        onChange={(e) => setPriceMain(e.target.value)}
+                      ></input>
+                    </div>
+                    <div className="flex items-center border-b py-2 text-base">
+                      <label htmlFor="dessert">dessert:</label>
+                      <input
+                        className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={nameDessert}
+                        onChange={(e) => setNameDessert(e.target.value)}
+                      ></input>
+                      <label htmlFor="priceDessert">€&nbsp;</label>
+                      <input
+                        className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-1 py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={priceDessert}
+                        onChange={(e) => setPriceDessert(e.target.value)}
+                      ></input>
+                    </div>
                   </div>
                   {/*footer*/}
                   <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
@@ -123,6 +122,7 @@ export default function AddForm({theMenu}) {
               </div>
             </div>
           </div>
+        </form>
         </>
       )}
     </>
