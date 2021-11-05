@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { MenuContext } from "../contexts/MenuContext";
-import MenuData from "../MenuData.json";
 
 export default function AddForm({theMenu}) {
 
