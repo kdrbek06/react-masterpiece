@@ -57,7 +57,7 @@ export default function Size() {
 
 
   return (
-      <footer className="flex flex-col bg-gray-400 p-10 md:flex-row">
+      <footer className="flex flex-col bg-black opacity-90 text-darkkhaki p-10 md:flex-row">
 
         <div className="footerLogo flex flex-1 flex-col px-2 items-center">
           <img className="py-4" src={Logo2} width="125px" alt="LOGO" />
@@ -83,11 +83,11 @@ export default function Size() {
 
 
 
-        <div className="footerSocial flex-1 px-2 mx-auto" id="contacts">
-          <h4 className="py-4 text-center">SOCIAL MEDIA</h4>
+        <div className="footerSocial flex-1 px-2" id="contacts">
+          <h4 className="py-4 text-center justify-items-center">SOCIAL MEDIA</h4>
           <div className="flex md:flex-col">
             <IconContext.Provider value={{ className: "react-icons", size: '2rem', style: { verticalAlign: 'middle' } }}>
-              {socialMedia.map((item, index) => <a key={index + ""} className="flex m-2 hover:text-white" href="https://google.com"> {item.icon} {!size || size.width >= 768
+              {socialMedia.map((item, index) => <a key={index + ""} className="flex m-2 hover:text-white md:ml-12 xl:ml-24" href="https://google.com"> {item.icon} {!size || size.width >= 768
                 ? <span className="md:">{item.text}</span> : ""}</a>)}
             </IconContext.Provider>
           </div>

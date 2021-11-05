@@ -1,3 +1,17 @@
+
+
+.modifiedH2 {
+    font-family: 'Rancho', cursive;
+    color: #c0a756 !important;
+    @apply my-4 text-6xl font-bold tracking-widest text-gray-800;
+    
+}
+
+.navText {
+    color: #c0a756 !important;
+
+}
+
 .mainCarousel {
     @apply w-full min-h-2/3 flex flex-col px-12 bg-cover bg-center flex-auto;
 }
@@ -11,7 +25,7 @@
 }
 
 .navLinks {
-    @apply text-center m-4 block md:inline-block hover:text-black;
+    @apply text-center m-4 block md:inline-block hover:text-white;
 }
 
 
@@ -54,3 +68,48 @@ dd {
     min-width: 8em;
 }
 
+
+
+
+.hamburgerMenu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+  }
+ .menuLine {
+    fill: none;
+    stroke: white;
+    stroke-width: 3;
+    transition: stroke-dasharray 800ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+ .menuLine1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 3;
+  }
+ .menuLine2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 3;
+  }
+ .menuLine3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 3;
+  }
+ .hamburgerMenu.opened .menuLine1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 3;
+  }
+ .hamburgerMenu.opened .menuLine2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 3;
+  }
+ .hamburgerMenu.opened .menuLine3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 3;
+  }
+  
