@@ -1,10 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html', './src/**/*.html'], darkMode: 'media', // or 'media' or 'class'
   theme: {
-    
-    textColor: {
-      'darkkhaki': '#c0a756',
-    },
     minHeight: {
       '0': '0',
       '1/4': '25%',
@@ -14,6 +10,9 @@ module.exports = {
       'full': '100%',
     },
     extend: {
+      textColor: {
+        'darkkhaki': '#c0a756',
+      },
       colors: {
         'darkkhaki': '#c0a756',
       },
