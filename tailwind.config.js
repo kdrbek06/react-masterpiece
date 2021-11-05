@@ -1,6 +1,10 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html', './src/**/*.html'], darkMode: 'media', // or 'media' or 'class'
   theme: {
+    
+    textColor: {
+      'darkkhaki': '#c0a756',
+    },
     minHeight: {
       '0': '0',
       '1/4': '25%',
@@ -10,6 +14,9 @@ module.exports = {
       'full': '100%',
     },
     extend: {
+      colors: {
+        'darkkhaki': '#c0a756',
+      },
       backgroundImage: {
         'hero-0': "url('./image/11.jpg')",
         'hero-1': "url('./image/22.jpg')",
@@ -21,6 +28,9 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+      },
+      fontFamily: {
+        'rancho': ['rancho', 'cursive']
       }
     },
   },

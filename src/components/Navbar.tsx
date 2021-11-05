@@ -1,33 +1,43 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-export interface IAppProps {
-}
+export default function App() {
 
-export default function App(props: IAppProps) {
+  //THIS TOGGLE HOOK USES FOR HAMBURGER MENU IN SMALL SCREEN
+  const [toggle, setToggle] = useState(false);
+
+  const menuClickHandler = () => setToggle(!toggle)
+
   return (
-    <nav className="items-center justify-between md:flex text-white font-bold bg-black bg-opacity-70 py-6 px-16">
+    <nav className="navText md:flex items-center justify-between font-bold bg-black w-full bg-opacity-90 p-4 md:py-4 md:px-12">
+      <div className="flex justify-between">
+        <Link to="/"> <a className=" font-bold font-rancho text-7xl">My-Kitchen</a> </Link>
+
+        <button className={"hamburgerMenu items-center" + (!toggle ? " opened" : "")} onClick={menuClickHandler} aria-label="Main Menu">
+          <svg className="md:hidden" width="50" height="40" viewBox="0 0 100 100">
+            <path className="menuLine menuLine1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path className="menuLine menuLine2" d="M 20,50 H 80" />
+            <path className="menuLine menuLine3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+          </svg>
+        </button>
 
 
-      <div className="">
-        <Link to="/"> <span className=" flex flex-shrink-0  font-bold text-3xl">MY-KITCHEN</span> </Link>
+
       </div>
 
-      <div className="">
+
+
+
+
+
+
+      <div className={"md:block" + (toggle ? " hidden" : "")}>
         <Link to="/menus" className="navLinks">MENUS</Link>
         <Link to="/reviews" className="navLinks">REVIEWS</Link>
         <Link to="/cookdetails" className="navLinks">COOKDETAILS</Link>
-        <Link to="/login" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 md:mt-0">LOGIN</Link>
+        <Link to="/login" className="navLinks border-white border-2 p-2 rounded-2xl">LOGIN</Link>
       </div>
-
-
     </nav>
   );
 }
-
-
-// <Link to="/"><button>Home</button></Link>
-//         <Link to="/Login"><button>Login</button></Link>
-//         <Link to="/Reviews"><button>Reviews</button></Link>
-//         <Link to="/Payments"><button>Payment</button></Link>

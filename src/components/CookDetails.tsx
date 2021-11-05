@@ -48,16 +48,16 @@ export default function CookDetails(props: IAppProps) {
 
 
     return (
-        <div className="xl:flex xl:flex-wrap">
+        <div className="md:flex md:flex-wrap">
 
-            <div className="w-full p-10 mx-auto md:w-1/4">
+            <div className="w-11/12 p-10 mx-auto md:w-1/3">
                 <img src={require(`./../image/${cook?.image}`).default} alt="" className="" /><br />
                 <hr /><p><strong>Description: </strong> {cook?.description}</p><br />
                 <hr /><span><strong>Rating</strong> </span>
             </div>
 
 
-            <div className="w-full p-10 mx-auto md:w-3/4">
+            <div className="w-11/12 p-10 mx-auto md:w-2/3">
                 <hr /><p><strong>{cook?.name + " " + cook?.surname}</strong></p><br />
 
                 <IconContext.Provider value={{ style: { display: "inline-block" } }}>
@@ -70,7 +70,7 @@ export default function CookDetails(props: IAppProps) {
                 </div>
 
                 <div className="w-full">
-                    {state === 'about' ? <CookAbout /> : <div className="m-auto">{cookReviews.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}</div>}
+                    {state === 'about' ? <CookAbout /> : <div className="m-auto flex flex-wrap text-sm">{cookReviews.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}</div>}
                 </div>
             </div>
         </div>
