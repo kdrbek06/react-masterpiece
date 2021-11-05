@@ -18,6 +18,7 @@ export default function AddForm({theMenu}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     updateMenu(id, updatedMenu);
+    setShowModal(false);
     console.log("submit handled");
   };
 
