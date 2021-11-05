@@ -17,7 +17,7 @@ export default function Card({ image, name, description, id }: ICook) {
       <img className="rounded-full m-auto mb-6 w-32 h-32" src={require(`./../image/${image}`).default} alt="" />
       <p>{name}</p>
       <p className="m-6">{description}</p>
-      <Link to={`/Cookdetails/${id}`} className="m-2 p-2 bg-gray-400 rounded-full transition duration-300 ease-in-out hover:bg-darkkhaki" >Go to details</Link>
+      <Link to={`/Cookdetails/${id}`} className="m-2 p-2 bg-gray-200 rounded-full transition duration-300 ease-in-out hover:bg-darkkhaki" >Go to details</Link>
 
     </div >
   );
