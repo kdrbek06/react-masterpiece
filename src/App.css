@@ -3,7 +3,7 @@
 .modifiedH2 {
     font-family: 'Rancho', cursive;
     color: #c0a756 !important;
-    @apply my-4 text-6xl font-bold tracking-widest text-gray-800;
+    @apply my-4 text-6xl font-bold tracking-widest;
     
 }
 

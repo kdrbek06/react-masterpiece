@@ -31,7 +31,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col1} className="w-56 rounded-full" />
+              <img src={Col1} className="rounded-full" />
             </div>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col2} className="w-56 rounded-full" />
+              <img src={Col2} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col3} className="w-56 rounded-full" />
+              <img src={Col3} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col4} className="w-56 rounded-full" />
+              <img src={Col4} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col5} className="w-56 rounded-full" />
+              <img src={Col5} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -71,7 +71,23 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col6} className="w-56 rounded-full" />
+              <img src={Col6} className=" rounded-full" />
+            </div>
+          </div>
+        </div>
+        <div className="h-32 w-32 relative cursor-pointer m-auto">
+          <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
+          <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
+            <div className="flex justify-evenly my-12">
+              <img src={Col7} className=" rounded-full" />
+            </div>
+          </div>
+        </div>
+        <div className="h-32 w-32 relative cursor-pointer m-auto">
+          <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
+          <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
+            <div className="flex justify-evenly my-12">
+              <img src={Col8} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -79,7 +95,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col7} className="w-56 rounded-full" />
+              <img src={Col9} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -87,7 +103,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col8} className="w-56 rounded-full" />
+              <img src={Col10} className=" rounded-full" />
             </div>
           </div>
         </div>
@@ -95,23 +111,7 @@ export default function App(props: IAppProps) {
           <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
           <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
             <div className="flex justify-evenly my-12">
-              <img src={Col9} className="w-56 rounded-full" />
-            </div>
-          </div>
-        </div>
-        <div className="h-32 w-32 relative cursor-pointer mb-5">
-          <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
-          <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
-            <div className="flex justify-evenly my-12">
-              <img src={Col10} className="w-56 rounded-full" />
-            </div>
-          </div>
-        </div>
-        <div className="h-32 w-32 relative cursor-pointer mb-5">
-          <div className="absolute inset-0 bg-white opacity-5 rounded-lg shadow-2xl"></div>
-          <div className="absolute inset-0 transform  hover:rotate-45 transition duration-300">
-            <div className="flex justify-evenly my-12">
-              <img src={Col11} className="w-56 rounded-full" />
+              <img src={Col11} className=" rounded-full" />
             </div>
           </div>
         </div>
