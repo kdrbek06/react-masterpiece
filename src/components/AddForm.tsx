@@ -5,6 +5,7 @@ export default function AddForm({theMenu}) {
 
   const id = theMenu.id;
   const [showModal, setShowModal] = React.useState(false);
+  const [day, setDay] = useState(theMenu.day);
   const [nameStarter, setNameStarter] = useState(theMenu.nameStarter);
   const [priceStarter, setPriceStarter] = useState(theMenu.priceStarter);
   const [nameMain, setNameMain] = useState(theMenu.nameMain);
@@ -12,7 +13,7 @@ export default function AddForm({theMenu}) {
   const [nameDessert, setNameDessert] = useState(theMenu.nameDessert);
   const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
   const {updateMenu} = useContext(MenuContext);
-  const updatedMenu = {id, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert}
+  const updatedMenu = {id, day, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert}
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,6 +55,14 @@ export default function AddForm({theMenu}) {
                   </div>
                   {/*body*/}
                   <div className="relative p-6 flex-auto">
+                    <div className="flex items-center py-2 px-2 break-normal text-base">
+                    <span className="text-gray-700">day&nbsp;:</span>
+                    <select className="form-select block w-full mt-1 appearance-none bg-yellow-200 bg-transparent border-none text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
+                    value={day} onChange={(e) => setDay(e.target.value)}>
+                        <option>DAY OF THE WEEK</option>
+                        <option>{theMenu.day}</option>
+                    </select>
+                    </div>
                     <div className="flex items-center py-2 px-2 break-normal text-base">
                       <label htmlFor="newStarter">starter&nbsp;:&nbsp;</label>
                       <input
