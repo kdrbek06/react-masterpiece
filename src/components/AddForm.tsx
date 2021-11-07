@@ -14,7 +14,7 @@ export default function AddForm({theMenu}) {
   const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
   const [totalPrice, setTotalPrice] = useState(theMenu.totalPrice)
   const {updateMenu} = useContext(MenuContext);
-  const updatedMenu = {id, day, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert }
+  const updatedMenu = {id, day, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert, totalPrice }
 
   const handleSubmit = (e) => {
     e.preventDefault();
