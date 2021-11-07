@@ -12,8 +12,9 @@ export default function AddForm({theMenu}) {
   const [priceMain, setPriceMain] = useState(theMenu.priceMain);
   const [nameDessert, setNameDessert] = useState(theMenu.nameDessert);
   const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
+  const [totalPrice, setTotalPrice] = useState(theMenu.totalPrice)
   const {updateMenu} = useContext(MenuContext);
-  const updatedMenu = {id, day, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert}
+  const updatedMenu = {id, day, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -110,6 +111,16 @@ export default function AddForm({theMenu}) {
                         value={priceDessert}
                         onChange={(e) => setPriceDessert(e.target.value)}
                       ></input>
+                    </div>
+                    <div className="flex items-center border-b py-2 text-base">
+                      <label htmlFor="dessert">Total Price:</label>
+                      <input
+                        className="appearance-none bg-yellow-200 border-none w-1/8 text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={totalPrice}
+                        onChange={(e) => setTotalPrice(e.target.value)}
+                      ></input>
+                      <label htmlFor="priceDessert">€&nbsp;</label>
                     </div>
                   </div>
                   {/*footer*/}

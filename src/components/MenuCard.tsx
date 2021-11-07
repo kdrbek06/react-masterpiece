@@ -5,7 +5,6 @@ import AddForm from './AddForm';
 export default function MenuCard({menu}) {
   
   const {updateMenu} = useContext(MenuContext);
-  console.log(menu.day)
   
   return (
     <>
@@ -17,10 +16,9 @@ export default function MenuCard({menu}) {
       <div>{menu.priceMain}</div>
       <div>{menu.nameDessert}</div>
       <div>{menu.priceDessert}</div>
+      <div>{menu.totalPrice}</div>
       <AddForm theMenu={menu}/>
     </div>
-   
-
     </>
   )
 }
