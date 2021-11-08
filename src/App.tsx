@@ -18,13 +18,8 @@ function App() {
   return (
     <MenuContextProvider>
       <div className="App">
-        
         <Router>
-
           <Navbar/>
-      
-          
-
           <Switch>
             <Route path="/" exact component={MainPage}></Route>
             <Route path="/reviews" component={Reviews}></Route>
@@ -34,8 +29,6 @@ function App() {
             <Route path="/login" component={Login}></Route>
           </Switch>
         </Router>
-
-
         <Footer/>
       </div>
     </MenuContextProvider>
