@@ -1,15 +1,13 @@
-import {useContext} from 'react';
-import MenuCard from './MenuCard';
+import React, { useContext } from 'react'
 import { MenuContext } from '../contexts/MenuContext';
-import AddForm from './AddForm';
+import MenuCard from './MenuCard';
 
-export default function Menus() {
-  
-  const {menus} = useContext(MenuContext);
+export default function MenuOverview() {
 
-  return (
-    <>
-    <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
+    const {menus} = useContext(MenuContext);
+
+    return (
+        <div className="md:container md:mx-auto mx-auto h-800 w-900 p-4 px-4">
       <div className="s p-4 border-4">
         <div className="box-border md:box-content h-350 w-800 text-center decoration-clone my-6 p-6 sm:mx6 border-solid border-4 border-light-blue-500">Menu Card
         </div>
@@ -17,13 +15,10 @@ export default function Menus() {
           {Object.values(menus).map((menu, id) => (
             <div key={id}>
               <MenuCard menu={menu} />
-              <div className="text-lg font-semibold"><AddForm theMenu={menu}/></div>
             </div>
           ))}
         </div>
       </div>
     </div>
-    </>
-  )
+    )
 }
-

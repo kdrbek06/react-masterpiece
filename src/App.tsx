@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Menus from './components/Menus';
 import CookDetails from './components/CookDetails';
 import {MenuContextProvider} from './contexts/MenuContext';
+import MenuOverview from './components/MenuOverview';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/reviews" component={Reviews}></Route>
             <Route path="/cookdetails/:id" component={CookDetails}></Route>
             <Route path="/menus" component={Menus}></Route>
+            <Route path="/menu" component={MenuOverview}></Route>
             <Route path="/login" component={Login}></Route>
           </Switch>
         </Router>

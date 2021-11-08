@@ -1,8 +1,5 @@
-import React, { useContext } from 'react';
 import ReviewCard from './ReviewCard';
 import Coll1 from '../image/coll1.png';
-import MenuCard from './MenuCard';
-import { MenuContext } from '../contexts/MenuContext';
 const reviews = [
   {
     image: "avatar.png",
@@ -39,17 +36,9 @@ export default function Reviews() {
   // function searchButton() {
   //   console.log('clicked')
   // }
-  const {menus} = useContext(MenuContext);
 
   return (
     <>
-    <div>
-      {Object.values(menus).map((menu, id) => (
-        <div key={id}>
-          <MenuCard menu={menu} />
-        </div>
-      ))}
-    </div>
       <form>
         <div className="mb-6 mx-5">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="searchReview">
