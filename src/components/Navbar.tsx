@@ -33,7 +33,7 @@ export default function App() {
 
 
       <div className={"md:block" + (toggle ? " hidden" : "")}>
-        <Link to="/menus" className="navLinks">MENUS</Link>
+        <Link to="/menu" className="navLinks">MENU</Link>
         <Link to="/reviews" className="navLinks">REVIEWS</Link>
         <Link to="/cookdetails" className="navLinks">COOKDETAILS</Link>
         <Link to="/login" className="navLinks border-white border-2 p-2 rounded-2xl">LOGIN</Link>
