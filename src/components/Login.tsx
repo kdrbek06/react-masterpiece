@@ -41,7 +41,7 @@ export default function Login() {
                     <div className="flex justify-center items-center mt-6">
                         <button
                             type="submit"
-                            className="bg-green-500 py-2 px-8 text-sm rounded border border-green focus:outline-none focus:border-green-dark"
+                            className="bg-green-100 hover:bg-green-500 py-2 px-8 text-sm rounded border border-green focus:outline-none focus:border-green-dark transition ease-in-out duration-500"
                         >
                             Login
                         </button>

@@ -77,8 +77,8 @@ export default function Size() {
         <div className="footerSubscribe flex flex-1 flex-col px-2">
           <h4 className="py-4 text-center">EMAIL NEWSLETTER</h4>
           <p>Subscribe to our e-newsletter to be informed about opportunities</p>
-          <input className="my-2 rounded-lg" type="email" />
-          <input className="my-2 rounded-lg" type="submit" value="SUBSCRIBE" />
+          <input className="my-2 px-2 rounded-lg" type="email" />
+          <input className="my-2 rounded-lg hover:bg-darkkhaki hover:text-white" type="submit" value="SUBSCRIBE" />
         </div>
 
 
