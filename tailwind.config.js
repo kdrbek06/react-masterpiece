@@ -20,6 +20,7 @@ module.exports = {
         'hero-0': "url('./image/11.jpg')",
         'hero-1': "url('./image/22.jpg')",
         'hero-2': "url('./image/33.jpg')",
+        'hero-4': "url('./image/44.jpg')",
       },
       margin: {
         '-6': '-1.5rem',
