@@ -56,7 +56,7 @@ export default function AddForm({theMenu}) {
                       </button>
                     </div>
                     {/*body*/}
-                    <div className="relative flex-auto w-full">
+                    <div className="items-center relative flex-row w-full"> 
                       <div className="flex items-center py-2 px-2 break-normal text-base">
                       <span className="text-gray-700">day&nbsp;:</span>
                       <select className="flex md:flex items-center w-full py-2 px-2 break-normal text-base"
@@ -65,7 +65,7 @@ export default function AddForm({theMenu}) {
                           <option>{theMenu.day}</option>
                       </select>
                       </div>
-                      <div className="lg:flex items-center py-2 px-2 break-normal text-base">
+                      <div className="py-2 px-2 break-normal text-base">
                         <label htmlFor="newStarter">starter&nbsp;:&nbsp;</label>
                         <input
                           className="md:appearance-none bg-yellow-200 w-full border-solid text-gray-700 text-base mr-3.5 py-1 px-2 leading-tight focus:outline-none"
@@ -74,13 +74,13 @@ export default function AddForm({theMenu}) {
                         ></input>
                         <label htmlFor="priceStarter">€&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
+                          className="md:w-14 appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={priceStarter}
                           onChange={(e) => setPriceStarter(e.target.value)}
                         ></input>
                       </div>
-                      <div className="md:flex items-center py-2 px-2 break-normal text-base">
+                      <div className="py-2 px-2 break-normal text-base">
                         <label htmlFor="main">main&nbsp;:&nbsp;</label>
                         <input
                           className="md:appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-3 py-1 px-2 leading-tight focus:outline-none"
@@ -89,14 +89,14 @@ export default function AddForm({theMenu}) {
                         ></input>
                         <label htmlFor="priceMain">€&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
+                          className="md:w-14 appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={priceMain}
                           onChange={(e) => setPriceMain(e.target.value)}
                         ></input>
                       </div>
-                      <div className="md:flex items-center border-b py-2 text-base">
-                        <label htmlFor="dessert">dessert:</label>
+                      <div className="border-b py-2 text-base">
+                        <label htmlFor="dessert">&nbsp;dessert&nbsp;:&nbsp;</label>
                         <input
                           className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
                           value={nameDessert}
@@ -104,7 +104,7 @@ export default function AddForm({theMenu}) {
                         ></input>
                         <label htmlFor="priceDessert">€&nbsp;</label>
                         <input
-                          className="appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-1 py-1 px-2 leading-tight focus:outline-none"
+                          className="md:w-14 appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-1 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={priceDessert}
                           onChange={(e) => setPriceDessert(e.target.value)}
@@ -113,7 +113,7 @@ export default function AddForm({theMenu}) {
                       <div className="md:flex items-center border-b py-2 text-base">
                         <label htmlFor="dessert">Total Price:</label>
                         <input
-                          className="appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
+                          className="md:w-14 appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
                           type="text"
                           value={totalPrice}
                           onChange={(e) => setTotalPrice(e.target.value)}
