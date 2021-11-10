@@ -22,8 +22,6 @@ const MenuContextProvider = (props) => {
         localStorage.setItem('menus', JSON.stringify(menus));
     })
 
-
-
     const updateMenu = (id, updatedMenu) => {
         setMenus(menus.map((menu) => menu.id === id ? updatedMenu : menu))
     }
