@@ -5,6 +5,8 @@ import AddForm from './AddForm';
 export default function MenuCard({menu}) {
   
   const {updateMenu} = useContext(MenuContext);
+  const totalPrice = Number.parseFloat(menu.priceStarter) + Number.parseFloat(menu.priceMain) + Number.parseFloat(menu.priceDessert);
+  console.log(totalPrice);
   
   return (
     <> 
@@ -24,7 +26,7 @@ export default function MenuCard({menu}) {
         <div className="grid justify-items-end text-yellow-400  text-opacity-60 font-rancho text-2xl mx-2">€{menu.priceDessert}</div>
       </div>
       <div className=" text-lg font-semibold mx-2">Total Price :
-        <div className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2">€ {menu.totalPrice}</div>
+        <div className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2">€ {totalPrice}</div>
       </div>
     </>
   )

@@ -5,7 +5,7 @@ import MenuCard from './MenuCard';
 export default function MenuOverview() {
 
     const {menus} = useContext(MenuContext);
-
+  
     return (
     <>
       <div className="box-border md:box-content bg-black text-yellow-300 h-350 w-800 text-center decoration-clone my-6 p-6 sm:mx6 border-solid border-4 border-light-blue-500 font-bold font-rancho text-7xl">Menu Card
