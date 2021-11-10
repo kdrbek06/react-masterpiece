@@ -19,8 +19,6 @@ const MenuContextProvider = (props) => {
         localStorage.setItem('menus', JSON.stringify(menus));
     })
 
-        
-    
     useEffect(() => {
         setMenus(JSON.parse(localStorage.getItem('menus') || '{}'))
     },[])
