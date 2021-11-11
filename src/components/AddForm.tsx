@@ -12,13 +12,13 @@ export default function AddForm({theMenu}) {
   const [priceMain, setPriceMain] = useState(theMenu.priceMain);
   const [nameDessert, setNameDessert] = useState(theMenu.nameDessert);
   const [priceDessert, setPriceDessert] = useState(theMenu.priceDessert);
-  const [totalPrice, setTotalPrice] = useState(theMenu.priceStarter)
+  const [totalPrice, setTotalPrice] = useState(theMenu.totalPrice)
   const {updateMenu} = useContext(MenuContext);
   const updatedMenu = {id, day, nameStarter, priceStarter, nameMain, priceMain, nameDessert, priceDessert, totalPrice }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const totalPrice = setTotalPrice(Number.parseFloat(theMenu.priceStarter) + Number.parseFloat(theMenu.priceMain) + Number.parseFloat(theMenu.priceDessert));
+    const totalPrice = setTotalPrice(Number.parseFloat((theMenu.priceStarter).toFixed(2)) + (Number.parseFloat(theMenu.priceMain).toFixed(2)) + (Number.parseFloat(theMenu.priceDessert).toFixed(2)));
     updateMenu(id, updatedMenu);
     setShowModal(false);
     console.log("submit handled");
@@ -57,7 +57,7 @@ export default function AddForm({theMenu}) {
                       </button>
                     </div>
                     {/*body*/}
-                    <div className="items-center relative flex-row w-full"> 
+                    <div className="items-center relative flex-row w-full px-2"> 
                       <div className="flex items-center py-2 px-2 break-normal text-base">
                       <span className="text-gray-700">day&nbsp;:</span>
                       <select className="flex md:flex items-center w-full py-2 px-2 break-normal text-base"
@@ -76,7 +76,7 @@ export default function AddForm({theMenu}) {
                       </div>
                       <label htmlFor="priceStarter">€&nbsp;</label>
                       <input
-                          className="md:w-14 appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3 py-1  leading-tight focus:outline-none"
+                          className="py-1 px-4 md:w-14 appearance-none bg-yellow-200 bg-transparent border-none w-full text-gray-700 text-base mr-3.5 leading-tight focus:outline-none"
                           type="text"
                           value={priceStarter}
                           onChange={(e) => setPriceStarter(e.target.value)}
@@ -113,13 +113,7 @@ export default function AddForm({theMenu}) {
                         ></input>
                       <div className="md:flex items-center border-b py-2 text-base">
                         <label htmlFor="dessert">Total Price:</label>
-                        <input
-                          className="md:w-14 appearance-none bg-yellow-200 border-none w-full text-gray-700 text-base mr-2 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={totalPrice}
-                          onChange={(e) => setTotalPrice(e.target.value)}
-                        ></input>
-                        <label htmlFor="totalPrice">€&nbsp;</label>
+                        <p className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2" >&nbsp;€ {totalPrice} </p>
                       </div>
                     </div>
                     {/*footer*/}
