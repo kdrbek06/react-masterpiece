@@ -16,19 +16,25 @@ interface Size {
 const socialMedia = [
   {
     "icon": < SiGoogle />,
-    "text": "Google"
+    "text": "Google",
+    "link": "https://www.google.com"
   },
   {
     "icon": < SiFacebook />,
-    "text": "Facebook"
+    "text": "Facebook",
+    "link": "https://www.facebook.com"
+
   },
   {
     "icon": < SiInstagram />,
-    "text": "Instagram"
+    "text": "Instagram",
+    "link": "https://www.instagram.com"
+
   },
   {
     "icon": < SiLinkedin />,
-    "text": "Linkedin"
+    "text": "Linkedin",
+    "link": "https://www.linkedin.com"
   }];
 
 export default function Size() {
@@ -86,10 +92,13 @@ export default function Size() {
         <div className="footerSocial flex-1 px-2" id="contacts">
           <h4 className="py-4 text-center justify-items-center">SOCIAL MEDIA</h4>
           <div className="flex md:flex-col">
+
             <IconContext.Provider value={{ className: "react-icons", size: '2rem', style: { verticalAlign: 'middle' } }}>
-              {socialMedia.map((item, index) => <a key={index + ""} className="flex m-2 hover:text-white md:ml-12 xl:ml-24" href="https://google.com"> {item.icon} {!size || size.width >= 768
-                ? <span className="md:">{item.text}</span> : ""}</a>)}
+
+              {socialMedia.map((item, index) => <a key={index + ""} className="flex m-2 hover:text-white md:ml-12 xl:ml-24" href={item.link}> {item.icon} {!size || size.width >= 768 ? <span className="">{item.text}</span> : ""}</a>)}
+
             </IconContext.Provider>
+
           </div>
         </div>
 

@@ -1,31 +1,7 @@
 import ReviewCard from './ReviewCard';
-import Coll1 from '../image/coll1.png';
-const reviews = [
-  {
-    image: "avatar.png",
-    name: "Piet U.",
-    comment: "Great food, would order again",
-    date: "02/01/21",
-  },
-  {
-    image: "avatar.png",
-    name: "Piet U.",
-    comment: "Great food, would order again",
-    date: "02/01/21",
-  },
-  {
-    image: "avatar.png",
-    name: "Piet U.",
-    comment: "Great food, would order again",
-    date: "02/01/21",
-  },
-  {
-    image: "avatar.png",
-    name: "Piet U.",
-    comment: "Great food, would order again",
-    date: "02/01/21",
-  }
-];
+
+import ReviewsData from '../data/ReviewsData.json'
+
 
 const state = { showDiv : true}
 
@@ -33,9 +9,7 @@ const state = { showDiv : true}
 
 
 export default function Reviews() {
-  // function searchButton() {
-  //   console.log('clicked')
-  // }
+
 
   return (
     <>
@@ -54,7 +28,7 @@ export default function Reviews() {
       </form>
 
       <div className="flex flex-wrap text-center items-center justify-center">
-        {reviews.map((review) => <ReviewCard {...review} />)}
+      {ReviewsData.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}
       </div>
 
     </>

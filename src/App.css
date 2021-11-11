@@ -27,7 +27,7 @@ p {
 }
 
 .navLinks {
-    @apply text-center m-4 block md:inline-block hover:text-white;
+    @apply group text-center m-4 block md:inline-block focus:text-white hover:text-white;
 }
 
 

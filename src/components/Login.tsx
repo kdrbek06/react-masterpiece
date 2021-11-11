@@ -25,7 +25,7 @@ export default function Login() {
                         <label htmlFor="email">Email</label>
                         <input
                             type="email"
-                            className="w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
+                            className="focus:ring-2 focus:ring-blue-600 w-full p-2 text-primary border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
                             id="email"
                             placeholder="Your Email"
                         />
@@ -34,7 +34,7 @@ export default function Login() {
                         <label htmlFor="password">Password</label>
                         <input
                             type="password"
-                            className="w-full p-2 border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
+                            className="focus:ring-2 focus:ring-blue-600 w-full p-2 border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4"
                             id="password"
                             placeholder="Your Password"
                         />
