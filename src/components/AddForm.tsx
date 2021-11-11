@@ -18,7 +18,7 @@ export default function AddForm({theMenu}) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const totalPrice = setTotalPrice(Number.parseFloat((theMenu.priceStarter).toFixed(2)) + (Number.parseFloat(theMenu.priceMain).toFixed(2)) + (Number.parseFloat(theMenu.priceDessert).toFixed(2)));
+    const totalPrice = setTotalPrice(Number.parseFloat(theMenu.priceStarter) + Number.parseFloat(theMenu.priceMain) + Number.parseFloat(theMenu.priceDessert));
     updateMenu(id, updatedMenu);
     setShowModal(false);
     console.log("submit handled");
@@ -113,7 +113,7 @@ export default function AddForm({theMenu}) {
                         ></input>
                       <div className="md:flex items-center border-b py-2 text-base">
                         <label htmlFor="dessert">Total Price:</label>
-                        <p className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2" >&nbsp;€ {totalPrice} </p>
+                        <p className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2" >&nbsp;€ {(Number.parseFloat(totalPrice).toFixed(2))} </p>
                       </div>
                     </div>
                     {/*footer*/}

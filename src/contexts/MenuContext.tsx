@@ -15,13 +15,13 @@ const MenuContextProvider = (props) => {
     ])
 
     useEffect(() => {
+        setMenus(JSON.parse(localStorage.getItem('menus') || '{}'))
+    },[])
+
+    useEffect(() => {
         localStorage.setItem('menus', JSON.stringify(menus));
     })
 
-    useEffect(() => {
-        setMenus(JSON.parse(localStorage.getItem('menus') || '{}'))
-    },[])
-    
     const updateMenu = (id, updatedMenu) => {
         setMenus(menus.map((menu) => menu.id === id ? updatedMenu : menu))
     }
