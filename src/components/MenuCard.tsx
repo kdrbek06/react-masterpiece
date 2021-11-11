@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { MenuContext } from '../contexts/MenuContext';
-import AddForm from './AddForm';
+import chicon from '../image/chichon.jpg';
 
 export default function MenuCard({menu}) {
   
@@ -11,8 +11,10 @@ export default function MenuCard({menu}) {
   
   return (
     <> 
-      <div className="box-border md:box-content bg-black text-yellow-300 text-opacity-90 h-350 w-800 text-center decoration-clone my-6 p-6 sm:mx6 border-solid border-4 border-light-blue-500 font-bold font-rancho "> 
-        <div className="justify-items-center text-4xl font-light">{menu.day}</div>
+    <img src={chicon} className="w-full md:w-1/3 transform transition duration-500 hover:scale-110" alt="" />
+    <div className="menuContainer">
+      <div className="box-border md:box-content bg-black text-yellow-300 text-opacity-90 h-350 w-800 text-center decoration-clone my-6 p-6 sm:mx6 border-light-blue-500 font-bold "> 
+        <div className="text-base justify-items-center font-light lg:text-4xl">{menu.day}</div>
       </div>
       <div  className="text-lg font-semibold mx-2">Entrée :
         <div className="flex text-xl font-light text-opacity-60">{menu.nameStarter}</div>
@@ -29,6 +31,7 @@ export default function MenuCard({menu}) {
       <div className=" text-lg font-semibold mx-2">Total Price :
         <div className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2">€ {fixedTotalPrice}</div>
       </div>
+    </div>
     </>
   )
 }
