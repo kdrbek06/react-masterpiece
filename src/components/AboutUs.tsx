@@ -8,7 +8,7 @@ export interface IAppProps {
 
 export default function App(props: IAppProps) {
   return (
-    <div className="m-2 p-2 lg:m-16 text-center">
+    <div id="about" className="m-2 p-2 lg:m-16 text-center">
       <h2 className="modifiedH2" >About Us</h2>
       <p className="m-auto md:w-2/3 mb-8">In our journey that started with restaurant-quality home-cooked takeaway service in 2021, we opened 34 takeaway branches in Ghent in a short time and reached the level of 1,500 online orders per day.
 

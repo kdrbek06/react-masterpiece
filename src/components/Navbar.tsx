@@ -36,7 +36,7 @@ export default function App() {
         <Link to="/menu" className="navLinks">MENU</Link>
         <Link to="/reviews" className="navLinks">REVIEWS</Link>
         <Link to="/cookdetails" className="navLinks">COOKDETAILS</Link>
-        <Link to="/login" className="navLinks border-white border-2 p-2 rounded-2xl">LOGIN</Link>
+        <Link to="/login" className="navLinks border-white hover:border-darkkhaki border-2 p-2 rounded-2xl">LOGIN</Link>
       </div>
     </nav>
   );

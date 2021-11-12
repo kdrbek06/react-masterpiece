@@ -4,7 +4,7 @@ import { SiLinkedin } from "react-icons/si";
 import { SiGoogle } from "react-icons/si";
 import { SiFacebook } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
-import Logo2 from '../image/logo2.png'
+import logo from "../image/logo1.png"
 
 
 
@@ -65,8 +65,10 @@ export default function Size() {
   return (
       <footer className="flex flex-col bg-black opacity-90 text-darkkhaki p-10 md:flex-row">
 
-        <div className="footerLogo flex flex-1 flex-col px-2 items-center">
-          <img className="py-4" src={Logo2} width="125px" alt="LOGO" />
+        <div className="flex flex-1 flex-col px-2 items-center">
+          <img className="" src={logo} width="150px">
+          </img>
+
           <p className="text-center md:text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam suscipit pariatur voluptatem quia harum asperiores sit perspiciatis, voluptas natus quo.</p>
         </div>
 
@@ -75,7 +77,8 @@ export default function Size() {
         <div className="footerLinks flex flex-1 flex-col px-2 items-center">
           <h4 className="py-4">USEFULL LINKS</h4>
           <ul>
-            <li><a href="https://google.com" className="hover:text-white">Homepage</a></li>
+            <li><a href="/" className="hover:text-white">Homepage</a></li>
+            <li><a href="#about" className="hover:text-white">About Us</a></li>
           </ul>
         </div>
 
