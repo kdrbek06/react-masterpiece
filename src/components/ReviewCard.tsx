@@ -1,15 +1,16 @@
 import React from 'react';
 
 
-export interface IAppProps {
+export interface ReviewsProps {
   image: any;
   name: string;
   comment: string;
   date: string;
+  avatar: number;
 }
 
 
-export default function ReviewCard({ image, comment, name, date }: IAppProps) {
+export default function ReviewCard({ image, comment, name, date }: ReviewsProps) {
 
   return (
 
