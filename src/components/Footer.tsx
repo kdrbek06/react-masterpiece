@@ -4,7 +4,7 @@ import { SiLinkedin } from "react-icons/si";
 import { SiGoogle } from "react-icons/si";
 import { SiFacebook } from "react-icons/si";
 import { SiInstagram } from "react-icons/si";
-import logo from "../image/logo1.png"
+import rmLogoWhite from "../image/rmLogo.jpg"
 
 
 
@@ -66,16 +66,16 @@ export default function Size() {
       <footer className="flex flex-col bg-black opacity-90 text-darkkhaki p-10 md:flex-row">
 
         <div className="flex flex-1 flex-col px-2 items-center">
-          <img className="" src={logo} width="150px">
+          <img className="" src={rmLogoWhite} width="150px">
           </img>
 
-          <p className="text-center md:text-left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam suscipit pariatur voluptatem quia harum asperiores sit perspiciatis, voluptas natus quo.</p>
+          <p className="text-center md:text-left my-5"> Real Meal 2021, All Rights Reserved ©</p>
         </div>
 
 
 
         <div className="footerLinks flex flex-1 flex-col px-2 items-center">
-          <h4 className="py-4">USEFULL LINKS</h4>
+          <h4 className="py-4">USEFUL LINKS</h4>
           <ul>
             <li><a href="/" className="hover:text-white">Homepage</a></li>
             <li><a href="#about" className="hover:text-white">About Us</a></li>
@@ -85,7 +85,7 @@ export default function Size() {
 
         <div className="footerSubscribe flex flex-1 flex-col px-2">
           <h4 className="py-4 text-center">EMAIL NEWSLETTER</h4>
-          <p>Subscribe to our e-newsletter to be informed about opportunities</p>
+          <p>Subscribe to our e-newsletter to receive promo's and new offers !</p>
           <input className="my-2 px-2 rounded-lg" type="email" />
           <input className="my-2 rounded-lg hover:bg-darkkhaki hover:text-white" type="submit" value="SUBSCRIBE" />
         </div>
