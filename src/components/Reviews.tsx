@@ -1,13 +1,10 @@
-import ReviewCard from './ReviewCard';
 import ReviewsData from '../data/ReviewsData.json'
-import { ReviewsProps } from './ReviewCard';
-
-import Cook from './../image/cook4.jpg'
 
 
 
 
 const state = { showDiv: true }
+console.log(state);
 
 
 

@@ -1,6 +1,4 @@
 import React from "react";
-import { BrowserRouter as Link, Route, Router, Switch } from "react-router-dom";
-import Menus from "./Menus";
 
 export default function Login() {
 
