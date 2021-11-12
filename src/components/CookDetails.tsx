@@ -73,6 +73,18 @@ export default function CookDetails(props: IAppProps) {
                     {state === 'about' ? <CookAbout /> : <div className="m-auto flex flex-wrap text-sm">{cookReviews.map((review, index) => <ReviewCard key={review.name + index} {...review} />)}</div>}
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+    
+
+
         </div>
     );
 }
