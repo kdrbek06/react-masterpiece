@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from './../image/headerLogo2.png'
 
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
   return (
     <nav className="navText md:flex items-center justify-between font-bold bg-black w-full bg-opacity-90 p-4 md:py-4 md:px-12">
       <div className="flex justify-between">
-        <Link to="/"> <a className=" font-bold font-rancho text-7xl">My-Kitchen</a> </Link>
+        <Link to="/"> <img src={logo} className="w-48 bg-darkkhaki"/></Link>
 
         <button className={"hamburgerMenu items-center" + (!toggle ? " opened" : "")} onClick={menuClickHandler} aria-label="Main Menu">
           <svg className="md:hidden" width="50" height="40" viewBox="0 0 100 100">
@@ -22,14 +23,7 @@ export default function App() {
           </svg>
         </button>
 
-
-
       </div>
-
-
-
-
-
 
 
       <div className={"md:block" + (toggle ? " hidden" : "")}>
