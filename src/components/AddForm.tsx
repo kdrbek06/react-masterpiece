@@ -28,7 +28,7 @@ export default function AddForm({theMenu}) {
     <>
     <div className="modalContainer flex lg:w-full">
         <button
-          className="items-center m-2 p-2 bg-yellow-200 rounded transition duration-300 ease-in-out hover:bg-gray-200"
+          className="items-center m-2 p-2 bg-green-200 rounded transition duration-300 ease-in-out hover:bg-gray-200"
           type="button"
           onClick={() => setShowModal(true)}
         >
@@ -58,9 +58,9 @@ export default function AddForm({theMenu}) {
                     </div>
                     {/*body*/}
                     <div className="items-center relative flex-row w-full px-2 text-2xl"> 
-                      <div className="flex items-center py-2 px-2 break-normal ">
-                      <span className="text-gray-700">day&nbsp;:</span>
-                      <select className="flex md:flex items-center w-full py-2 px-2 break-normal text-base"
+                      <div className="flex items-center py-2 px-2 break-normal bg- ">
+                      <label className="text-base">day&nbsp;:&nbsp;</label>
+                      <select className="flex md:flex items-center w-full py-2 px-2 break-normal text-base bg-white"
                       value={day} onChange={(e) => setDay(e.target.value)}>
                           <option>DAY OF THE WEEK</option>
                           <option>{theMenu.day}</option>
@@ -76,7 +76,7 @@ export default function AddForm({theMenu}) {
                       </div>
                       <label htmlFor="priceStarter">€&nbsp;</label>
                       <input
-                          className="py-1 px-4 md:w-14 appearance-none bg-transparent border-none w-full text-gray-700 text-base mr-3.5 leading-tight focus:outline-none"
+                          className="py-1 px-4 md:w-14 appearance-none bg-white border-none w-full text-gray-700 text-base mr-3.5 leading-tight focus:outline-none"
                           type="text"
                           value={priceStarter}
                           onChange={(e) => setPriceStarter(e.target.value)}
@@ -90,12 +90,12 @@ export default function AddForm({theMenu}) {
                         ></input>
                       </div>
                       <label htmlFor="priceMain">€&nbsp;</label>
-                        <input
-                          className="md:w-14 appearance-none bg-transparent border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={priceMain}
-                          onChange={(e) => setPriceMain(e.target.value)}
-                        ></input>
+                      <input
+                        className="md:w-14 appearance-none bg-white border-none w-full text-gray-700 text-base py-1 px-2 leading-tight focus:outline-none"
+                        type="text"
+                        value={priceMain}
+                        onChange={(e) => setPriceMain(e.target.value)}
+                      ></input>
                       <div className="border-b py-4 px-2 text-base">
                         <label htmlFor="dessert">&nbsp;dessert&nbsp;:&nbsp;</label>
                         <input
@@ -105,12 +105,12 @@ export default function AddForm({theMenu}) {
                         ></input>
                       </div> 
                       <label htmlFor="priceDessert">€&nbsp;</label>
-                        <input
-                          className="md:w-14 appearance-none bg-transparent border-none w-full text-gray-700 text-base mr-1 py-1 px-2 leading-tight focus:outline-none"
-                          type="text"
-                          value={priceDessert}
-                          onChange={(e) => setPriceDessert(e.target.value)}
-                        ></input>
+                      <input
+                        className="md:w-14 appearance-none bg-white border-none w-full text-gray-700 text-base py-1 px-2 focus:outline-none"
+                        type="text"
+                        value={priceDessert}
+                        onChange={(e) => setPriceDessert(e.target.value)}
+                      ></input>
                       <div className="md:flex items-center border-b py-2 text-base">
                         <label htmlFor="dessert">Total Price:</label>
                         <p className="flex justify-items-end text-green-400 font-rancho text-2xl mr-2" >&nbsp;€ {(Number.parseFloat(totalPrice).toFixed(2))} </p>

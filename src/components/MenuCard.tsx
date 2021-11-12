@@ -1,17 +1,18 @@
-import { useContext } from 'react';
+import { toASCII } from 'punycode';
+import { useContext, useState } from 'react';
 import { MenuContext } from '../contexts/MenuContext';
-import chicon from '../image/chichon.jpg';
 
 export default function MenuCard({menu}) {
   
   const {updateMenu} = useContext(MenuContext);
   const totalPrice = Number.parseFloat(menu.priceStarter) + Number.parseFloat(menu.priceMain) + Number.parseFloat(menu.priceDessert);
   const fixedTotalPrice = totalPrice.toFixed(2);
+  const [newTotalPrice, setNewTotalPrice] = useState(totalPrice);
   console.log(totalPrice);
   
   return (
     <> 
-    <img src={chicon} className="w-full md:w-1/3 transform transition duration-500 hover:scale-110" alt="" />
+    
     <div className="menuContainer">
       <div className="box-border md:box-content bg-black text-yellow-300 text-opacity-90 h-350 w-800 text-center decoration-clone my-6 p-6 sm:mx6 border-light-blue-500 font-bold "> 
         <div className="text-base justify-items-center font-light lg:text-4xl">{menu.day}</div>
