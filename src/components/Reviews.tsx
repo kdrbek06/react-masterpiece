@@ -58,7 +58,7 @@ export default function Reviews() {
                   <div className="flex items-start text-left">
                     <div className="flex-shrink-0">
                       <div className="inline-block relative">
-                        <a href="#" className="block relative">
+                        <a className="block relative">
                           <img alt="profil" src={`https://i.pravatar.cc/${review.avatar}`} className="mx-auto object-cover rounded-full h-16 w-16 " />
                         </a>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="fill-current text-white bg-green-600 rounded-full p-1 absolute bottom-0 right-0 w-6 h-6 -mx-1 -my-1">
@@ -132,4 +132,4 @@ export default function Reviews() {
 function menus(menus: any) {
   throw new Error('Function not implemented.');
 }
-
+console.log(menus);

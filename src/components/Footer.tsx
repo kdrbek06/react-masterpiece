@@ -66,7 +66,7 @@ export default function Size() {
       <footer className="flex flex-col bg-black opacity-90 text-darkkhaki p-10 md:flex-row">
 
         <div className="flex flex-1 flex-col px-2 items-center">
-          <img className="" src={rmLogoWhite} width="150px">
+          <img className="" src={rmLogoWhite} alt="very cool logo" width="150px">
           </img>
 
           <p className="text-center md:text-left my-5"> Real Meal 2021, All Rights Reserved ©</p>
