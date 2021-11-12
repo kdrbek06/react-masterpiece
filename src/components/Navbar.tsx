@@ -13,7 +13,7 @@ export default function App() {
   return (
     <nav className="navText md:flex items-center justify-between font-bold bg-black w-full bg-opacity-90 p-4 md:py-4 md:px-12">
       <div className="flex justify-between">
-        <Link to="/"> <img src={logo} className="w-48 bg-darkkhaki"/></Link>
+        <Link to="/"><span className="font-rancho text-7xl">Real Meal</span><span className="font-rancho text-2xl border-l-2 border-darkkhaki px-2 mx-2">the real deal</span> </Link>
 
         <button className={"hamburgerMenu items-center" + (!toggle ? " opened" : "")} onClick={menuClickHandler} aria-label="Main Menu">
           <svg className="md:hidden" width="50" height="40" viewBox="0 0 100 100">
