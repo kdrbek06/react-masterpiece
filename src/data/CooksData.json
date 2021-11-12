@@ -8,7 +8,7 @@
         "phone" : "+32 411 23 43 53",
         "city" : "Ghent",
         "email" : "chefmaeve@mykitchen.com",
-        "birthday" : "1 april 1986",
+        "birthday" : "20 april 1986",
         "gender" : "Female"
     },
     {
@@ -20,7 +20,7 @@
         "phone" : "+32 411 21 43 53",
         "city" : "Brussel",
         "email" : "chefvalerie@mykitchen.com",
-        "birthday" : "1 april 1993",
+        "birthday" : "14 November 1993",
         "gender" : "Female"
     },
     {
@@ -32,7 +32,7 @@
         "phone" : "+32 411 23 41 53",
         "city" : "Leuven",
         "email" : "chefgauthier@mykitchen.com",
-        "birthday" : "1 april 1988",
+        "birthday" : "20 February 1988",
         "gender" : "Male"
     },
     {
@@ -44,7 +44,7 @@
         "phone" : "+32 412 23 43 51",
         "city" : "Antwerp",
         "email" : "cheflucy@mykitchen.com",
-        "birthday" : "1 april 1990",
+        "birthday" : "4 July 1990",
         "gender" : "Female"
     }
 ]
