@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../image/headerLogo2.png'
+import rmlogo from './../image/rmLogo.png'
 
 
 export default function App() {
@@ -13,7 +13,8 @@ export default function App() {
   return (
     <nav className="navText md:flex items-center justify-between font-bold bg-black w-full bg-opacity-90 p-4 md:py-4 md:px-12">
       <div className="flex justify-between">
-        <Link to="/"><span className="font-rancho text-7xl">Real Meal</span><span className="font-rancho text-2xl border-l-2 border-darkkhaki px-2 mx-2">the real deal</span> </Link>
+        <Link to="/"><img src={rmlogo} alt="logo" ></img></Link>
+        
 
         <button className={"hamburgerMenu items-center" + (!toggle ? " opened" : "")} onClick={menuClickHandler} aria-label="Main Menu">
           <svg className="md:hidden" width="50" height="40" viewBox="0 0 100 100">
@@ -29,7 +30,6 @@ export default function App() {
       <div className={"md:block" + (toggle ? " hidden" : "")}>
         <Link to="/menu" className="navLinks">MENU</Link>
         <Link to="/reviews" className="navLinks">REVIEWS</Link>
-        <Link to="/cookdetails" className="navLinks">COOKDETAILS</Link>
         <Link to="/login" className="navLinks border-white hover:border-darkkhaki border-2 p-2 rounded-2xl">LOGIN</Link>
       </div>
     </nav>

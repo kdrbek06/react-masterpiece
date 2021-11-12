@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useEffect} from 'react';
 import MenuCard from './MenuCard';
 import { MenuContext } from '../contexts/MenuContext';
 import AddForm from './AddForm';
