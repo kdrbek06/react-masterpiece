@@ -1,5 +1,4 @@
 import ReviewsData from '../data/ReviewsData.json'
-import { ReviewsProps } from './ReviewCard';
 
 const obj = {
   "cookId": 4,
@@ -9,7 +8,7 @@ const obj = {
   "date": "11.04.20",
   "avatar": 111
 }
-
+console.log(obj)
 export default function Reviews() {
 
   return (
