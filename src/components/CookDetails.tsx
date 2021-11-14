@@ -39,10 +39,10 @@ export default function CookDetails(props: IAppProps) {
 
 
 // FETCHING RELATIVE COOK FROM DATABASE AS COOK -- IT RETURNS AN OBJECT
-    const cook = CooksData.filter((cook) => cook.id.toString() == id)[0]
+    const cook = CooksData.filter((cook) => cook.id.toString() === id)[0]
 
 // FETCHING RELATIVE REVIEWS FOR COOK FROM DATABASE -- IT RETURNS AN ARRAY
-    const cookReviews = ReviewsData.filter((review) => review.cookId.toString() == id)
+    const cookReviews = ReviewsData.filter((review) => review.cookId.toString() === id)
 
 
     return (
