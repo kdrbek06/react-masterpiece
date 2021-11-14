@@ -2,16 +2,16 @@
     {
         "cookId": 1,
         "image": "avatar.png",
-        "name": "Janette Berry",
-        "comment": "We took the 4 courses menu. It was incredibly good! Mix of fish and (slow cooked) meat. The dessert was amazing. A small family is running the restaurant and I found the atmosphere super cozy. The fact that it was pouring was long forgotten. Highly recommended",
-        "date": "02.01.21",
+        "name": "Fabio Verelst",
+        "comment": "The Flemish goulash was from another planet. I never understood why they'd put beer in it, but now i wouldn't go without anymore ! The rice pudding fresh from the farm was worth it's €3. ",
+        "date": "11.11.21",
         "avatar": 101
     },
     {
         "cookId": 1,
         "image": "avatar.png",
         "name": "James Knight",
-        "comment": "If you're looking for the best restaurant of Antwerp, look no further, you've found it. Perfectly priced, a mix of Asian cultures, the food is to die for. On top of that, you'll feel at home as they go the extra mile to make sure you're enjoying the evening. The expert knowledge of wine and, especially, beers is a definite bonus we won't forget. The fact that it was pouring was long forgotten.",
+        "comment": "This week there were two vegetarian days, so i ordered them both. I found the chicory very bitter, and there was not enough sauce to compensate for it. The vegatarian lasagna was a true succes, would order again ! Both dishes looked and smelled amazing, too bad i don't like bitter food. ",
         "date": "03.06.21",
         "avatar": 102
 
@@ -20,7 +20,7 @@
         "cookId": 2,
         "image": "avatar.png",
         "name": "Karry Omer",
-        "comment": "Great place! Delicious food with Asian influence made and served by dedicated people passionated about their work. Keep up the good work Mistral!",
+        "comment": "First time i ordered here, can recommend ! I'm intolerant to most junkfood so decided to try Real Meal. I must say, all my colleagues at work were jealous. Fast delivery, very fresh food and almost no wrapping involved. I could very tell this person was passionate about cooking :).",
         "date": "11.04.20",
         "avatar": 103
 
@@ -28,8 +28,8 @@
     {
         "cookId": 2,
         "image": "avatar.png",
-        "name": "Pam Cornwell",
-        "comment": "This restaurant has a very friendly staff and serves great French cuisine dishes with fresh ingredients! In times of the Covid-19 they offer tables in line with the national and local measurements, giving you a moment to enjoy their food and your company(bubble) to the max. Keep up the good work Mistral!",
+        "name": "Jack Naggings",
+        "comment": "I like the idea here, but the days i ordered food, it was quite underwhelming. Maybe i should be a cook for a week ? ",
         "date": "09.11.21",
         "avatar": 104
 
@@ -38,7 +38,7 @@
         "cookId": 3,
         "image": "avatar.png",
         "name": "Richard Bullock",
-        "comment": "The service was superb - the book I sought was keenly priced, delivery to an address other than my home was easily achieved, on time and perfectly and protectively wrapped. What's not to like !!?",
+        "comment": "I will always look back to when my grandmother would cook a fresh Chateau Briand with handcut fries. It was the highpoint of my  week. I've ordered it here, and it almost felt like i was back at grandma's. I know it is supposed to be JuSt FoOd, but for me this was a great experience. The nostalgia hit me. I recommend this Cook to everybody who loves some good old Vlaamse Kost ! ",
         "date": "06.08.19",
         "avatar": 105
 

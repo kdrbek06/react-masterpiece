@@ -14,7 +14,7 @@ export default function App(props: IAppProps) {
 
   const { id } = useParams<{ id: string }>();
 
-  const cook = CooksData.filter((cook) => cook.id.toString() == id)[0]
+  const cook = CooksData.filter((cook) => cook.id.toString() === id)[0]
 
 
 

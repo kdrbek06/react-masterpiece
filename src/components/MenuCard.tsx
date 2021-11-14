@@ -1,13 +1,14 @@
-import { toASCII } from 'punycode';
 import { useContext, useState } from 'react';
 import { MenuContext } from '../contexts/MenuContext';
 
 export default function MenuCard({menu}) {
   
   const {updateMenu} = useContext(MenuContext);
+  console.log(updateMenu)
   const totalPrice = Number.parseFloat(menu.priceStarter) + Number.parseFloat(menu.priceMain) + Number.parseFloat(menu.priceDessert);
   const fixedTotalPrice = totalPrice.toFixed(2);
-  const [newTotalPrice, setNewTotalPrice] = useState(totalPrice);
+  const [newTotalPrice] = useState(totalPrice);
+  console.log(newTotalPrice)
   console.log(totalPrice);
   
   return (

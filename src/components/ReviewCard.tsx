@@ -17,7 +17,7 @@ export default function ReviewCard({ image, comment, name, date }: ReviewsProps)
     <div className="testimonial w-full sm:w-1/2 text-center flex flex-col justify-between	my-6 p-6 sm:mx6 bg-white bg-opacity-40 hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
 
       <div>
-        <img src={require(`./../image/${image}`).default} alt="image" className="mx-auto w-20 opacity-70 block xl:inline rounded-full"></img>
+        <img src={require(`./../image/${image}`).default} alt="testimonial" className="mx-auto w-20 opacity-70 block xl:inline rounded-full"></img>
         <p className="text-gray-500">{comment}</p>
       </div>
       <div>

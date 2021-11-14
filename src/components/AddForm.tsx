@@ -19,6 +19,7 @@ export default function AddForm({theMenu}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const totalPrice = setTotalPrice(Number.parseFloat(theMenu.priceStarter) + Number.parseFloat(theMenu.priceMain) + Number.parseFloat(theMenu.priceDessert));
+    console.log(totalPrice);
     updateMenu(id, updatedMenu);
     setShowModal(false);
     console.log("submit handled");

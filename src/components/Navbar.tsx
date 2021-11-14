@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import rmlogo from './../image/rmLogo.png'
+import rmLogoSideways from './../image/rmLogoSideways.png';
 
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <nav className="navText md:flex items-center justify-between font-bold bg-black w-full bg-opacity-90 p-4 md:py-4 md:px-12">
       <div className="flex justify-between">
-        <Link to="/"><img src={rmlogo} alt="logo" ></img></Link>
+        <Link to="/"><img src={rmLogoSideways} alt="logo" ></img></Link>
         
 
         <button className={"hamburgerMenu items-center" + (!toggle ? " opened" : "")} onClick={menuClickHandler} aria-label="Main Menu">
