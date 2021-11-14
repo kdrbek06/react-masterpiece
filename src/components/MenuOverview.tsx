@@ -11,7 +11,7 @@ export default function MenuOverview() {
     <>
       
       <div className="md:flex justify-evenly items-center">
-        <div className="text-center px-2 py-2 md:max-w-xl text-base tracking-wider">
+        <div className="text-center px-2 py-2 md:max-w-xl text-base tracking-wider ">
         <h2 className="modifiedH2 max-w-xl mx-auto text-4xl text-center px-auto py-auto opacity-80%" >This Week's Menu</h2>
         Welcome to the Menu Page. Here you find the overview of this weeks selection ! All dishes are carefully selected and prepared by our cooks. 
         Here at Real Meal we highly value our planet, and stand strongly against the wase of plastic and food. Therefore we disabled the option of individual orders, and you can only choose to select the complete Menu per day. 
@@ -29,7 +29,7 @@ export default function MenuOverview() {
           </div>
         ))}
       </div>
-      <h2 className="font-rancho text-8xl text-center mt-20 mb-20 text-yellow-300 opacity-60" >Bon Appétit !</h2>
+      <h2 className="font-rancho text-7xl text-center mt-20 mb-20 text-yellow-300 opacity-60" >Bon Appétit !</h2>
       <br/><br/>
     </>
     )
