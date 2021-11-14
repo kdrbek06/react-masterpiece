@@ -14,14 +14,16 @@ const MenuContextProvider = (props) => {
         { id: uuidv4(), day: "Saturday", nameStarter: "Carpaccio", priceStarter: 4.20 , nameMain: "Pain Jambon", priceMain: 6.90 , nameDessert: "Tiramisu", priceDessert: 4.20, totalPrice: 13.50, }
     ])
 
-    useEffect(() => {
-        setMenus(JSON.parse(localStorage.getItem('menus') || '{}'))
-    },[])
+
 
     useEffect(() => {
         localStorage.setItem('menus', JSON.stringify(menus));
     })
 
+    useEffect(() => {
+        setMenus(JSON.parse(localStorage.getItem('menus') || '{}'))
+    },[])
+    
     const updateMenu = (id, updatedMenu) => {
         setMenus(menus.map((menu) => menu.id === id ? updatedMenu : menu))
     }
