@@ -27,7 +27,7 @@ export default function App(props: IAppProps) {
 
       <section className="p-10 min-h-screen flex md:flex-row items-center justify-evenly flex-wrap">
 
-        {collaborationBrands.map(item => <div className="flex place-items-center cursor-pointer h-32 w-32 m-3 p-2 transform  hover:scale-150 transition duration-300 ease-in-out">
+        {collaborationBrands.map((item, index) => <div key={index + "col"} className="flex place-items-center cursor-pointer h-32 w-32 m-3 p-2 transform  hover:scale-150 transition duration-300 ease-in-out">
           <img src={item} alt="collaboration"/></div>)}
           
       </section>

@@ -1,14 +1,5 @@
 import ReviewsData from '../data/ReviewsData.json'
-import { ReviewsProps } from './ReviewCard';
 
-const obj = {
-  "cookId": 4,
-  "image": "avatar.png",
-  "name": "kadir Bek",
-  "comment": "Great place! Delicious food with Asian influence made and served by dedicated people passionated about their work. Keep up the good work Mistral!",
-  "date": "11.04.20",
-  "avatar": 111
-}
 
 export default function Reviews() {
 
@@ -31,15 +22,15 @@ export default function Reviews() {
 
             <div className="masonry sm:masonry-sm md:masonry-md">
 
-              {ReviewsData.map((review, index) =>
+              {ReviewsData.map((review, index) => 
 
-                <div className="bg-white rounded-lg p-4 mb-6 shadow sm:inline-block break-inside">
+                <div className="bg-white rounded-lg p-4 mb-6 shadow sm:inline-block break-inside" key={index + "key"}>
                   <div className="flex items-start text-left">
                     <div className="flex-shrink-0">
                       <div className="inline-block relative">
-                        <a className="block relative">
+                        <div className="block relative">
                           <img alt="profil" src={`https://i.pravatar.cc/${review.avatar}`} className="mx-auto object-cover rounded-full h-16 w-16 " />
-                        </a>
+                        </div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="fill-current text-white bg-green-600 rounded-full p-1 absolute bottom-0 right-0 w-6 h-6 -mx-1 -my-1">
                           <path d="M19 11a7.5 7.5 0 0 1-3.5 5.94L10 20l-5.5-3.06A7.5 7.5 0 0 1 1 11V3c3.38 0 6.5-1.12 9-3 2.5 1.89 5.62 3 9 3v8zm-9 1.08l2.92 2.04-1.03-3.41 2.84-2.15-3.56-.08L10 5.12 8.83 8.48l-3.56.08L8.1 10.7l-1.03 3.4L10 12.09z">
                           </path>
