@@ -1,6 +1,5 @@
 import ReviewsData from '../data/ReviewsData.json'
 
-
 export default function Reviews() {
 
   return (
