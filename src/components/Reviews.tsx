@@ -1,38 +1,19 @@
-import ReviewCard from './ReviewCard';
 import ReviewsData from '../data/ReviewsData.json'
 import { ReviewsProps } from './ReviewCard';
 
-import Cook from './../image/cook4.jpg'
-
-
-
-
-const state = { showDiv: true }
-
-
-
+const obj = {
+  "cookId": 4,
+  "image": "avatar.png",
+  "name": "kadir Bek",
+  "comment": "Great place! Delicious food with Asian influence made and served by dedicated people passionated about their work. Keep up the good work Mistral!",
+  "date": "11.04.20",
+  "avatar": 111
+}
 
 export default function Reviews() {
 
-
   return (
     <div>
-      <form>
-        <div className="mb-6 mx-5">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="searchReview">
-            Add Review
-          </label>
-          <input className="shadow appearance-none border border-blue-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="text" placeholder="Search for a Cook"></input>
-          <button className="text-lg font-semibold 
-        bg-gray-800 w-full text-white rounded-lg
-        px-6 py-3 block shadow-xl hover:text-white hover:bg-black">
-            Add
-          </button>
-        </div>
-      </form>
-
-
-
       <div className="min-w-screen min-h-screen bg-gray-50 flex items-center justify-center py-5">
         <div className="w-full bg-white border-t border-b border-gray-200 px-5 py-16 md:py-24 text-gray-800">
           <div className="w-full max-w-6xl mx-auto">
@@ -48,16 +29,11 @@ export default function Reviews() {
               </div>
             </div>
 
-
-
-
-
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-fr">
+            <div className="masonry sm:masonry-sm md:masonry-md">
 
               {ReviewsData.map((review, index) =>
 
-                <div className="bg-white rounded-lg p-4 shadow sm:inline-block auto-rows-fr	">
+                <div className="bg-white rounded-lg p-4 mb-6 shadow sm:inline-block break-inside">
                   <div className="flex items-start text-left">
                     <div className="flex-shrink-0">
                       <div className="inline-block relative">
@@ -109,30 +85,12 @@ export default function Reviews() {
                     </div>
                   </div>
                 </div>
-
               )}
             </div>
-
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
   )
-}
-
-function menus(menus: any) {
-  throw new Error('Function not implemented.');
 }
 
