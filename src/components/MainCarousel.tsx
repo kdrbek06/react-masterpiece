@@ -19,7 +19,7 @@ export default function App(props: IAppProps) {
       </div>
 
       <div className="flex justify-center">
-        {[0,1,2].map((item, index)=> <span key={item + ''} className={`text-center m-2 leading-none align-middle w-4 h-4 bg-gray-400 rounded-full ${image === index && 'bg-gray-800'}`}> </span> )}
+        {[0,1,2,3,4,5,6].map((item, index)=> <span key={item + ''} className={`text-center m-2 leading-none align-middle w-4 h-4 bg-gray-400 rounded-full ${image === index && 'bg-gray-800'}`}> </span> )}
       </div>
 
 

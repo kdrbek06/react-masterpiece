@@ -17,6 +17,23 @@
 
     },
     {
+        "cookId": 4,
+        "image": "avatar.png",
+        "name": "Bart Verelst",
+        "comment": "The Flemish goulash was from another planet. I never understood why they'd put beer in it, but now i wouldn't go without anymore ! The rice pudding fresh from the farm was worth it's €3. ",
+        "date": "11.11.21",
+        "avatar": 101
+    },
+    {
+        "cookId": 4,
+        "image": "avatar.png",
+        "name": "Kerry Hummer",
+        "comment": "This week there were two vegetarian days, so i ordered them both. I found the chicory very bitter, and there was not enough sauce to compensate for it. The vegatarian lasagna was a true succes, would order again ! Both dishes looked and smelled amazing, too bad i don't like bitter food. ",
+        "date": "03.06.21",
+        "avatar": 102
+
+    },
+    {
         "cookId": 2,
         "image": "avatar.png",
         "name": "Karry Omer",

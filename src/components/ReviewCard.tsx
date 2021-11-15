@@ -24,10 +24,6 @@ export default function ReviewCard({ image, comment, name, date }: ReviewsProps)
         <p className="text-gray-900 font-bold uppercase mt-6">{name}</p>
         <p className="text-blue-600">{date}</p>
       </div>
-
-
-
-
     </div>
 
   )

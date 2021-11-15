@@ -109,3 +109,27 @@ Here we call it MenuContextProvider because obviously we are working on a Menu.
     export {MenuContextProvider};
 
 # Cooks and Reviews : 
+
+## The card we used for each cook
+    <div className="flex flex-col w-full sm:w-4/5 md:w-72  m-4 p-4 rounded-2xl bg-white bg-opacity-90 transition duration-500 ease-in-out hover:bg-gray-200 transform hover:-translate-y-1 hover:scale-110">
+
+      <img className="rounded-full m-auto mb-6 w-32 h-32" src={require(`./../image/${image}`).default} alt="" />
+      <p>{name}</p>
+      <p className="m-6">{description}</p>
+      <Link to={`/Cookdetails/${id}`} className="m-2 p-2 bg-gray-200 rounded-full transition duration-500 ease-in-out hover:bg-darkkhaki" >Go to details</Link>
+
+    </div >
+
+
+## Reviews cards fetch the data from json file
+
+    <div className="testimonial w-full sm:w-1/2 text-center flex flex-col justify-between	my-6 p-6 sm:mx6 bg-white bg-opacity-40 hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300">
+
+      <div>
+        <img src={require(`./../image/${image}`).default} alt="testimonial" className="mx-auto w-20 opacity-70 block xl:inline rounded-full"></img>
+        <p className="text-gray-500">{comment}</p>
+      </div>
+      <div>
+        <p className="text-gray-900 font-bold uppercase mt-6">{name}</p>
+        <p className="text-blue-600">{date}</p>
+      </div>
