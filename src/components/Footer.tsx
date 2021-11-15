@@ -64,7 +64,7 @@ export default function Size() {
         <h4 className="py-4">USEFUL LINKS</h4>
         <ul>
           <li><a href="/" className="hover:text-white">Homepage</a></li>
-          <li><a href="#about" className="hover:text-white">About Us</a></li>
+          <li><a href="/#about" className="hover:text-white">About Us</a></li>
         </ul>
       </div>
 

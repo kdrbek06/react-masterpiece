@@ -8,8 +8,8 @@ export default function App(props: IAppProps) {
 
   const [image, setImage] = useState<number>(0);
 
-  const handleLeftArrow = () => setImage(image === 0 ? 2 : image - 1)
-  const handleRightArrow = () => setImage(image === 2 ? 0 : image + 1)
+  const handleLeftArrow = () => setImage(image === 0 ? 6 : image - 1)
+  const handleRightArrow = () => setImage(image === 6 ? 0 : image + 1)
 
   return (
     <div className={`mainCarousel min-h-full transition-all duration-1000 bg-hero-${image}`}>
