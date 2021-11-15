@@ -57,7 +57,7 @@ export default function Size() {
       <div className="flex flex-1 flex-col px-2 items-center">
         <img className="" src={rmLogoWhite} alt="footer-logo" width="150px">
         </img>
-        <p className="text-center md:text-left my-5"> Real Meal 2021, All Rights Reserved ©</p>
+        <p className="text-center md:text-left my-5"> Real Meal 2021, All Rights Reserved ©<br /><span className="text-xs text-gray-700">Collaboration logos are representative and do not represent an actual partnership.</span></p>
       </div>
 
       <div className="footerLinks flex flex-1 flex-col px-2 items-center">
